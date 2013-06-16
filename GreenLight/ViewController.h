@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GreenLightService.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    UILabel *label;
+    GreenLightService *service;
+}
+
+@property(nonatomic, strong)  IBOutlet UILabel *label;
+
+-(IBAction)doThing:(id)sender;
+
 
 @end

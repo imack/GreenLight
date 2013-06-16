@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GreenLightService.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    service = [[GreenLightService alloc] init];
+}
+
+
+-(IBAction)doThing:(id)sender{
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
