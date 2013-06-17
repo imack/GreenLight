@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GreenLightService.h"
+ 
 
 @interface ViewController ()
 
@@ -22,6 +23,13 @@
     
     
     service = [[GreenLightService alloc] init];
+    
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:3];
+    localNotification.alertBody = @"Alert message goes here";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
 }
 
 

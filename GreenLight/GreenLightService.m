@@ -42,14 +42,15 @@
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
     //self.cBReady = false;
+    NSArray *serviceScan = [NSArray arrayWithObject:[CBUUID UUIDWithString:kCOREUUID]];
     switch (central.state) {
         case CBCentralManagerStatePoweredOff:
             NSLog(@"CoreBluetooth BLE hardware is powered off");
             break;
         case CBCentralManagerStatePoweredOn:
             NSLog(@"CoreBluetooth BLE hardware is powered on and ready");
-            //self.cBReady = true;
-            [cbm scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
+            //self.cBReady = true;            
+            [cbm scanForPeripheralsWithServices:serviceScan options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
             break;
         case CBCentralManagerStateResetting:
             NSLog(@"CoreBluetooth BLE hardware is resetting");
@@ -78,7 +79,6 @@
     
     CBUUID *cbuuidPipe = [CBUUID UUIDWithString:kCharacteristicPipeUUIDString];
     
-    
     greenLightCharacteristic = [[CBMutableCharacteristic alloc]
                                  initWithType:cbuuidPipe
                                  properties:CBCharacteristicPropertyNotify
@@ -87,12 +87,9 @@
     
     greenLightService = [[CBMutableService alloc] initWithType:cbuuidService primary:YES];
     
-    
     greenLightService.characteristics = [NSArray arrayWithObject:greenLightCharacteristic];
     
     [manager addService:greenLightService];
-    
-    
     
 }
 
@@ -106,13 +103,21 @@
     NSString *kGreenLightServiceUUIDString = kCOREUUID;
     
     CBUUID *cbuuidService = [CBUUID UUIDWithString:kGreenLightServiceUUIDString];
+    NSUUID *myUUID = [[UIDevice alloc] identifierForVendor];
     
     NSArray *services = [NSArray arrayWithObject:cbuuidService];
+    NSString *uuidString = [myUUID UUIDString];
     
     NSDictionary *advertisingDict = [NSDictionary dictionaryWithObject:services forKey:CBAdvertisementDataServiceUUIDsKey ];
     
     [manager startAdvertising:advertisingDict];
-    [manager startAdvertising:@{ CBAdvertisementDataLocalNameKey : @"ICServer", CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:kCOREUUID]] }];
+    [manager startAdvertising:@{ CBAdvertisementDataLocalNameKey : @"ICServer", CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:kCOREUUID]], CBAdvertisementDataServiceDataKey: uuidString }];
+    
+}
+
+- (void)enteredBackground
+{
+    
     
 }
 
