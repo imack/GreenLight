@@ -14,7 +14,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxL-OR-jpv">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="227" id="GBD-O9-yqa"/>
                                     <constraint firstAttribute="height" constant="23" id="ydE-QS-hPO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,12 +36,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cxL-OR-jpv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1bp-63-yVB"/>
                             <constraint firstItem="BIG-Qc-iAT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="183" id="4EO-TA-SHp"/>
+                            <constraint firstItem="cxL-OR-jpv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CHH-en-y16"/>
                             <constraint firstItem="cxL-OR-jpv" firstAttribute="top" secondItem="3" secondAttribute="top" constant="115" id="mLs-0M-HKt"/>
-                            <constraint firstItem="BIG-Qc-iAT" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="oGW-xH-6Jx"/>
-                            <constraint firstItem="BIG-Qc-iAT" firstAttribute="centerX" secondItem="cxL-OR-jpv" secondAttribute="centerX" type="default" id="ubu-mR-MVA"/>
+                            <constraint firstItem="BIG-Qc-iAT" firstAttribute="centerX" secondItem="cxL-OR-jpv" secondAttribute="centerX" type="default" id="voU-Ea-YSx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="serviceLabel" destination="cxL-OR-jpv" id="hwW-FQ-2Ad"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,7 +59,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="doThing:"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="serviceLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

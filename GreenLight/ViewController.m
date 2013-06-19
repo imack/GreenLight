@@ -16,6 +16,8 @@
 
 @implementation ViewController
 
+@synthesize serviceLabel;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -23,9 +25,13 @@
     
     
     service = [[GreenLightService alloc] init];
+    service.delegate = self;
     
 }
 
+-(void) update:(NSString*)update{
+    self.serviceLabel.text = update;
+}
 
 -(IBAction)doThing:(id)sender{
     

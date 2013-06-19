@@ -9,6 +9,7 @@
 #import "GreenLightService.h"
 
 
+
 @interface GreenLightService ()
 - (void) setupService;
 @end
@@ -16,14 +17,19 @@
 
 @implementation GreenLightService
 
-
+@synthesize delegate;
+@synthesize peripheral=_peripheral;
+@synthesize cbm;
+@synthesize manager;
 
 -(id) init{
     self = [super init];
     
     if (self){
         manager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
+        manager.delegate = self;
         cbm = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+        cbm.delegate = self;
     }
     return self;
 }
@@ -103,24 +109,50 @@
     NSString *kGreenLightServiceUUIDString = kCOREUUID;
     
     CBUUID *cbuuidService = [CBUUID UUIDWithString:kGreenLightServiceUUIDString];
-    NSUUID *myUUID = [[UIDevice alloc] identifierForVendor];
+    // NSUUID *myUUID = [[UIDevice alloc] identifierForVendor];
     
     NSArray *services = [NSArray arrayWithObject:cbuuidService];
-    NSString *uuidString = [myUUID UUIDString];
     
     NSDictionary *advertisingDict = [NSDictionary dictionaryWithObject:services forKey:CBAdvertisementDataServiceUUIDsKey ];
     
     [manager startAdvertising:advertisingDict];
-    [manager startAdvertising:@{ CBAdvertisementDataLocalNameKey : @"ICServer", CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:kCOREUUID]], CBAdvertisementDataServiceDataKey: uuidString }];
+    [manager startAdvertising:@{ CBAdvertisementDataLocalNameKey : @"GreenlightService", CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:kCOREUUID]] }];
     
 }
 
-- (void)enteredBackground
-{
+- (void)peripheral:(CBPeripheral *)aPeripheral didDiscoverServices:(NSError *)error {
+    if (error) {
+        NSLog(@"Error discovering service: %@", [error localizedDescription]);
+        //[self cleanup];
+        return;
+    }
     
-    
+    for (CBService *service in aPeripheral.services) {
+        NSLog(@"Service found with UUID: %@", service.UUID);
+        
+        // Discovers the characteristics for a given service
+        if ([greenLightService.UUID isEqual:[CBUUID UUIDWithString:kCOREUUID]]) {
+            [self.peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:kCOREUUID]] forService:service];
+        }
+    }
 }
 
+
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+    // Clears the data that we may already have
+    //[self.data setLength:0];
+    // Sets the peripheral delegate
+    [self.peripheral setDelegate:self];
+    // Asks the peripheral to discover the service
+    [self.peripheral discoverServices:@[ [CBUUID UUIDWithString:kCOREUUID] ]];
+}
+
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error{
+    
+    
+    NSLog (@"Fail to connect");
+    
+}
 
 - (void) centralManager:(CBCentralManager *)central
   didDiscoverPeripheral:(CBPeripheral *)peripheral
@@ -128,7 +160,38 @@
                    RSSI:(NSNumber *)RSSI
 {
     // Print out the name parameter of the discovered peripheral
-    NSLog (@"Discovered peripheral: %@ with RSSI: %@", [peripheral name], RSSI);
+    //NSLog (@"Discovered peripheral: %@ with RSSI: %@", [peripheral name], RSSI);
+    NSString *update = [NSString stringWithFormat:@"Discovered with RSSI: %@", RSSI];
+    [delegate update:update];
+    NSLog(@"Discovered with RSSI: %@", RSSI);
+    
+    //[central stopScan];
+    if (self.peripheral != peripheral) {
+        self.peripheral = peripheral;
+        NSLog(@"Connecting to peripheral %@", peripheral);
+        
+        // Connects to the discovered peripheral
+        [cbm connectPeripheral:self.peripheral options:nil];
+        
+        UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:1];
+        localNotification.alertBody = @"Greenlight Found Peripheral";
+        localNotification.timeZone = [NSTimeZone defaultTimeZone];
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    }
+    
+}
+
+
+#pragma mark- CBPeripheralManagerDelegate Protocol Methods
+
+
+
+- (void)peripheralManagerIsReadyToUpdateSubscribers:(CBPeripheralManager *)peripheral
+{
+    NSLog(@"PeripheralManagerIsReadyToUpdateSubscribers");
+    //self.sendReady = YES;
+    
 }
 
 -(void) peripheralManager:(CBPeripheralManager *)peripheral

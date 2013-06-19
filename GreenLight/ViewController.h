@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "GreenLightService.h"
 
-@interface ViewController : UIViewController{
-    UILabel *label;
+@interface ViewController : UIViewController<GreenLightServiceDelegate>{
+    UILabel *serviceLabel;
     GreenLightService *service;
 }
 
-@property(nonatomic, strong)  IBOutlet UILabel *label;
+@property(nonatomic, strong)  IBOutlet UILabel *serviceLabel;
 
 -(IBAction)doThing:(id)sender;
 
