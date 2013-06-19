@@ -1,4 +1,3 @@
 platform :ios, '6.0'
-pod 'MFSideMenu', '~> 0.5.2'
-
-pod 'REMenu', '~> 1.3.5'
+pod 'NanoStore', '~> 2.7.7'
+pod 'AFNetworking', '~> 1.2'

@@ -10,9 +10,15 @@
 
 @implementation AppDelegate
 
+@synthesize nanoStore;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    NSString *thePath = @"nanoStore.database";
+    self.nanoStore = [NSFNanoStore createAndOpenStoreWithType:NSFPersistentStoreType path:thePath error:nil];
+    
     return YES;
 }
 
