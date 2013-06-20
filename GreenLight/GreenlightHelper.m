@@ -12,9 +12,5 @@
 @implementation GreenlightHelper
 
 
-+(NSFNanoStore*) getNanoStore{
-    AppDelegate *app = [[UIApplication sharedApplication] delegate];    
-    return app.nanoStore;    
-}
 
 @end

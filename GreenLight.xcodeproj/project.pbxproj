@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2815D06217721E26001FF5F9 /* GreenlightHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D06117721E26001FF5F9 /* GreenlightHelper.m */; };
+		2815D070177366FA001FF5F9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2815D06E177366FA001FF5F9 /* Model.xcdatamodeld */; };
+		2815D07317736814001FF5F9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D07217736814001FF5F9 /* User.m */; };
 		28C033EE1767E35A00C25E12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033ED1767E35A00C25E12 /* UIKit.framework */; };
 		28C033F01767E35A00C25E12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033EF1767E35A00C25E12 /* Foundation.framework */; };
 		28C033F21767E35A00C25E12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033F11767E35A00C25E12 /* CoreGraphics.framework */; };
@@ -43,6 +45,9 @@
 		1368908B6B2B444681FFC0AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2815D06017721E26001FF5F9 /* GreenlightHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenlightHelper.h; sourceTree = "<group>"; };
 		2815D06117721E26001FF5F9 /* GreenlightHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenlightHelper.m; sourceTree = "<group>"; };
+		2815D06F177366FA001FF5F9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2815D07117736814001FF5F9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2815D07217736814001FF5F9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		28C033EA1767E35A00C25E12 /* GreenLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C033ED1767E35A00C25E12 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28C033EF1767E35A00C25E12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -143,6 +148,9 @@
 				28C034291767E6FD00C25E12 /* GreenLightService.m */,
 				2815D06017721E26001FF5F9 /* GreenlightHelper.h */,
 				2815D06117721E26001FF5F9 /* GreenlightHelper.m */,
+				2815D06E177366FA001FF5F9 /* Model.xcdatamodeld */,
+				2815D07117736814001FF5F9 /* User.h */,
+				2815D07217736814001FF5F9 /* User.m */,
 			);
 			path = GreenLight;
 			sourceTree = "<group>";
@@ -325,6 +333,8 @@
 				28C0340A1767E35A00C25E12 /* ViewController.m in Sources */,
 				28C0342A1767E6FD00C25E12 /* GreenLightService.m in Sources */,
 				2815D06217721E26001FF5F9 /* GreenlightHelper.m in Sources */,
+				2815D070177366FA001FF5F9 /* Model.xcdatamodeld in Sources */,
+				2815D07317736814001FF5F9 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +529,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2815D06E177366FA001FF5F9 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2815D06F177366FA001FF5F9 /* Model.xcdatamodel */,
+			);
+			currentVersion = 2815D06F177366FA001FF5F9 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 28C033E21767E35A00C25E12 /* Project object */;
 }

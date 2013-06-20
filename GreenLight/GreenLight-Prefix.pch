@@ -13,5 +13,5 @@
     #import <Foundation/Foundation.h>
 #endif
 
-#import "NanoStore.h"
+#import "CoreData+MagicalRecord.h"
 #import "GreenlightHelper.h"

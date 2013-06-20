@@ -7,17 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "MagicalRecord.h"
 
 @implementation AppDelegate
 
-@synthesize nanoStore;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
-    NSString *thePath = @"nanoStore.database";
-    self.nanoStore = [NSFNanoStore createAndOpenStoreWithType:NSFPersistentStoreType path:thePath error:nil];
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"GreenLightDatabase.sqlite"]; 
     
     return YES;
 }
@@ -51,9 +49,9 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [MagicalRecord cleanUp];
     
     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
     localNotification.alertBody = @"Greenlight shut down";
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];

@@ -11,6 +11,4 @@
 @interface GreenlightHelper : NSObject
 
 
-+(NSFNanoStore*) getNanoStore;
-
 @end

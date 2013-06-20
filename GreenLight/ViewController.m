@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GreenLightService.h"
+#import "User.h"
  
 
 @interface ViewController ()
@@ -23,9 +24,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    
     service = [[GreenLightService alloc] init];
     service.delegate = self;
+    
+    User *current_user = [User MR_findFirstByAttribute:@"current" withValue:[NSNumber numberWithInt:1]];
+    
+    if (current_user){
+        
+    } else {
+        
+    }
+                          
+                          
+    
     
 }
 

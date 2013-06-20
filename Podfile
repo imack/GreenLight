@@ -1,3 +1,3 @@
 platform :ios, '6.0'
-pod 'NanoStore', '~> 2.7.7'
+pod 'MagicalRecord', '~> 2.1'
 pod 'AFNetworking', '~> 1.2'
