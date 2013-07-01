@@ -11,8 +11,8 @@
 		2815D070177366FA001FF5F9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2815D06E177366FA001FF5F9 /* Model.xcdatamodeld */; };
 		2815D07317736814001FF5F9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D07217736814001FF5F9 /* User.m */; };
 		2815D076177372D8001FF5F9 /* SidebarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2815D075177372D8001FF5F9 /* SidebarStoryboard.storyboard */; };
-		2815D07E177373E7001FF5F9 /* SidebarCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D079177373E7001FF5F9 /* SidebarCell1.m */; };
-		2815D07F177373E7001FF5F9 /* SidebarController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D07B177373E7001FF5F9 /* SidebarController1.m */; };
+		2815D07E177373E7001FF5F9 /* SidebarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D079177373E7001FF5F9 /* SidebarCell.m */; };
+		2815D07F177373E7001FF5F9 /* SidebarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D07B177373E7001FF5F9 /* SidebarController.m */; };
 		2815D080177373E7001FF5F9 /* MainSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D07D177373E7001FF5F9 /* MainSideViewController.m */; };
 		2815D0A4177374AE001FF5F9 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815D083177374AE001FF5F9 /* account.png */; };
 		2815D0A5177374AE001FF5F9 /* account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815D084177374AE001FF5F9 /* account@2x.png */; };
@@ -88,10 +88,10 @@
 		2815D07117736814001FF5F9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2815D07217736814001FF5F9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2815D075177372D8001FF5F9 /* SidebarStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SidebarStoryboard.storyboard; sourceTree = "<group>"; };
-		2815D078177373E7001FF5F9 /* SidebarCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarCell1.h; sourceTree = "<group>"; };
-		2815D079177373E7001FF5F9 /* SidebarCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarCell1.m; sourceTree = "<group>"; };
-		2815D07A177373E7001FF5F9 /* SidebarController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarController1.h; sourceTree = "<group>"; };
-		2815D07B177373E7001FF5F9 /* SidebarController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarController1.m; sourceTree = "<group>"; };
+		2815D078177373E7001FF5F9 /* SidebarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarCell.h; sourceTree = "<group>"; };
+		2815D079177373E7001FF5F9 /* SidebarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarCell.m; sourceTree = "<group>"; };
+		2815D07A177373E7001FF5F9 /* SidebarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarController.h; sourceTree = "<group>"; };
+		2815D07B177373E7001FF5F9 /* SidebarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarController.m; sourceTree = "<group>"; };
 		2815D07C177373E7001FF5F9 /* MainSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSideViewController.h; sourceTree = "<group>"; };
 		2815D07D177373E7001FF5F9 /* MainSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSideViewController.m; sourceTree = "<group>"; };
 		2815D083177374AE001FF5F9 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
@@ -196,10 +196,10 @@
 		2815D077177372FC001FF5F9 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
-				2815D078177373E7001FF5F9 /* SidebarCell1.h */,
-				2815D079177373E7001FF5F9 /* SidebarCell1.m */,
-				2815D07A177373E7001FF5F9 /* SidebarController1.h */,
-				2815D07B177373E7001FF5F9 /* SidebarController1.m */,
+				2815D078177373E7001FF5F9 /* SidebarCell.h */,
+				2815D079177373E7001FF5F9 /* SidebarCell.m */,
+				2815D07A177373E7001FF5F9 /* SidebarController.h */,
+				2815D07B177373E7001FF5F9 /* SidebarController.m */,
 				2815D07C177373E7001FF5F9 /* MainSideViewController.h */,
 				2815D07D177373E7001FF5F9 /* MainSideViewController.m */,
 			);
@@ -528,8 +528,8 @@
 				2815D06217721E26001FF5F9 /* GreenlightHelper.m in Sources */,
 				2815D070177366FA001FF5F9 /* Model.xcdatamodeld in Sources */,
 				2815D07317736814001FF5F9 /* User.m in Sources */,
-				2815D07E177373E7001FF5F9 /* SidebarCell1.m in Sources */,
-				2815D07F177373E7001FF5F9 /* SidebarController1.m in Sources */,
+				2815D07E177373E7001FF5F9 /* SidebarCell.m in Sources */,
+				2815D07F177373E7001FF5F9 /* SidebarController.m in Sources */,
 				2815D080177373E7001FF5F9 /* MainSideViewController.m in Sources */,
 				2815D0C9177377FB001FF5F9 /* Utils.m in Sources */,
 				2815D0CA177377FB001FF5F9 /* FlatTheme.m in Sources */,

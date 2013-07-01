@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "MagicalRecord.h"
 #import "MainSideViewController.h"
-#import "SidebarController1.h"
+#import "SidebarController.h"
 #import "FlatTheme.h"
 #import "GHSidebarSearchViewControllerDelegate.h"
 

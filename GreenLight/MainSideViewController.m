@@ -7,7 +7,7 @@
 //
 
 #import "MainSideViewController.h"
-#import "SidebarController1.h"
+#import "SidebarController.h"
 #import "FlatTheme.h"
 #import "Utils.h"
 
