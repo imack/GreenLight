@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController<GreenLightServiceDelegate>{
     UILabel *serviceLabel;
     GreenLightService *service;
+    
 }
 
 @property(nonatomic, strong)  IBOutlet UILabel *serviceLabel;

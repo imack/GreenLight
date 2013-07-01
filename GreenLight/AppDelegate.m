@@ -8,14 +8,47 @@
 
 #import "AppDelegate.h"
 #import "MagicalRecord.h"
+#import "MainSideViewController.h"
+#import "SidebarController1.h"
+#import "FlatTheme.h"
+#import "GHSidebarSearchViewControllerDelegate.h"
+
+@interface AppDelegate () 
+@property (nonatomic, strong) GHRevealViewController *revealController;
+@end
+
 
 @implementation AppDelegate
+
+@synthesize revealController;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"GreenLightDatabase.sqlite"]; 
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"GreenLightDatabase.sqlite"];
+    
+    RevealBlock revealBlock = ^(){
+		[self.revealController toggleSidebar:!self.revealController.sidebarShowing
+									duration:kGHRevealSidebarDefaultAnimationDuration];
+	};
+    
+    [FlatTheme styleNavigationBarWithFontName:@"Avenir" andColor:[UIColor colorWithWhite:0.4f alpha:1.0f]];
+    
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SidebarStoryboard" bundle:nil];
+    
+    self.revealController = [[GHRevealViewController alloc] initWithNibName:nil bundle:nil];
+    
+    UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"SidebarStoryboard" bundle:nil];
+    MainSideViewController *mainVC = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"MainSideViewController"];
+    mainVC.revealBlock = revealBlock;
+    
+    UIViewController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    revealController.contentViewController = nav;
+    revealController.sidebarViewController = [sb instantiateViewControllerWithIdentifier:@"SidebarController1"];
+    
+    self.window.rootViewController = revealController;
     
     return YES;
 }
