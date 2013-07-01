@@ -66,6 +66,12 @@
 		28C0341F1767E35A00C25E12 /* GreenLightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C0341E1767E35A00C25E12 /* GreenLightTests.m */; };
 		28C0342A1767E6FD00C25E12 /* GreenLightService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C034291767E6FD00C25E12 /* GreenLightService.m */; };
 		28C0342C1767E71F00C25E12 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C0342B1767E71F00C25E12 /* CoreBluetooth.framework */; };
+		28CF00A21782078F00144660 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF009F1782078F00144660 /* SettingsController.m */; };
+		28CF00A31782078F00144660 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00A11782078F00144660 /* SettingsCell.m */; };
+		28CF00A91782081400144660 /* RCSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00A61782081400144660 /* RCSwitch.m */; };
+		28CF00AA1782081400144660 /* RCSwitchOnOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00A81782081400144660 /* RCSwitchOnOff.m */; };
+		28CF00B0178215A500144660 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00AD178215A500144660 /* FeedCell.m */; };
+		28CF00B1178215A500144660 /* FeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00AF178215A500144660 /* FeedController.m */; };
 		40E72BB69B524FBC907FCB35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1368908B6B2B444681FFC0AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +160,18 @@
 		28C034281767E6FD00C25E12 /* GreenLightService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenLightService.h; sourceTree = "<group>"; };
 		28C034291767E6FD00C25E12 /* GreenLightService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenLightService.m; sourceTree = "<group>"; };
 		28C0342B1767E71F00C25E12 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		28CF009E1782078F00144660 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		28CF009F1782078F00144660 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		28CF00A01782078F00144660 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
+		28CF00A11782078F00144660 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
+		28CF00A51782081400144660 /* RCSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSwitch.h; sourceTree = "<group>"; };
+		28CF00A61782081400144660 /* RCSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSwitch.m; sourceTree = "<group>"; };
+		28CF00A71782081400144660 /* RCSwitchOnOff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSwitchOnOff.h; sourceTree = "<group>"; };
+		28CF00A81782081400144660 /* RCSwitchOnOff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSwitchOnOff.m; sourceTree = "<group>"; };
+		28CF00AC178215A500144660 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		28CF00AD178215A500144660 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		28CF00AE178215A500144660 /* FeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedController.h; sourceTree = "<group>"; };
+		28CF00AF178215A500144660 /* FeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedController.m; sourceTree = "<group>"; };
 		E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -246,6 +264,7 @@
 		2815D0CB1777E06D001FF5F9 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				28CF00A41782080700144660 /* RCSwitch */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -286,6 +305,8 @@
 		28C033F31767E35A00C25E12 /* GreenLight */ = {
 			isa = PBXGroup;
 			children = (
+				28CF00AB1782159800144660 /* Activities */,
+				28CF009D1782078200144660 /* Settings */,
 				2815D0CB1777E06D001FF5F9 /* lib */,
 				2815D082177374A5001FF5F9 /* Resources */,
 				2815D077177372FC001FF5F9 /* Sidebar */,
@@ -342,6 +363,39 @@
 				28C0341A1767E35A00C25E12 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28CF009D1782078200144660 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				28CF009E1782078F00144660 /* SettingsController.h */,
+				28CF009F1782078F00144660 /* SettingsController.m */,
+				28CF00A01782078F00144660 /* SettingsCell.h */,
+				28CF00A11782078F00144660 /* SettingsCell.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		28CF00A41782080700144660 /* RCSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				28CF00A51782081400144660 /* RCSwitch.h */,
+				28CF00A61782081400144660 /* RCSwitch.m */,
+				28CF00A71782081400144660 /* RCSwitchOnOff.h */,
+				28CF00A81782081400144660 /* RCSwitchOnOff.m */,
+			);
+			name = RCSwitch;
+			sourceTree = "<group>";
+		};
+		28CF00AB1782159800144660 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				28CF00AC178215A500144660 /* FeedCell.h */,
+				28CF00AD178215A500144660 /* FeedCell.m */,
+				28CF00AE178215A500144660 /* FeedController.h */,
+				28CF00AF178215A500144660 /* FeedController.m */,
+			);
+			name = Activities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,6 +583,12 @@
 				2815D080177373E7001FF5F9 /* MainSideViewController.m in Sources */,
 				2815D0C9177377FB001FF5F9 /* Utils.m in Sources */,
 				2815D0CA177377FB001FF5F9 /* FlatTheme.m in Sources */,
+				28CF00A21782078F00144660 /* SettingsController.m in Sources */,
+				28CF00A31782078F00144660 /* SettingsCell.m in Sources */,
+				28CF00A91782081400144660 /* RCSwitch.m in Sources */,
+				28CF00AA1782081400144660 /* RCSwitchOnOff.m in Sources */,
+				28CF00B0178215A500144660 /* FeedCell.m in Sources */,
+				28CF00B1178215A500144660 /* FeedController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
