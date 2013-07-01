@@ -58,7 +58,7 @@
 		28C034021767E35A00C25E12 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28C034011767E35A00C25E12 /* Default@2x.png */; };
 		28C034041767E35A00C25E12 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28C034031767E35A00C25E12 /* Default-568h@2x.png */; };
 		28C034071767E35A00C25E12 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C034051767E35A00C25E12 /* MainStoryboard.storyboard */; };
-		28C0340A1767E35A00C25E12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C034091767E35A00C25E12 /* ViewController.m */; };
+		28C0340A1767E35A00C25E12 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C034091767E35A00C25E12 /* HomeViewController.m */; };
 		28C034121767E35A00C25E12 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C034111767E35A00C25E12 /* SenTestingKit.framework */; };
 		28C034131767E35A00C25E12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033ED1767E35A00C25E12 /* UIKit.framework */; };
 		28C034141767E35A00C25E12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033EF1767E35A00C25E12 /* Foundation.framework */; };
@@ -72,6 +72,7 @@
 		28CF00AA1782081400144660 /* RCSwitchOnOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00A81782081400144660 /* RCSwitchOnOff.m */; };
 		28CF00B0178215A500144660 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00AD178215A500144660 /* FeedCell.m */; };
 		28CF00B1178215A500144660 /* FeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00AF178215A500144660 /* FeedController.m */; };
+		28CF00B41782167D00144660 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B31782167B00144660 /* AboutViewController.m */; };
 		40E72BB69B524FBC907FCB35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1368908B6B2B444681FFC0AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -149,8 +150,8 @@
 		28C034011767E35A00C25E12 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		28C034031767E35A00C25E12 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		28C034061767E35A00C25E12 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		28C034081767E35A00C25E12 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		28C034091767E35A00C25E12 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		28C034081767E35A00C25E12 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		28C034091767E35A00C25E12 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		28C034101767E35A00C25E12 /* GreenLightTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenLightTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C034111767E35A00C25E12 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		28C034191767E35A00C25E12 /* GreenLightTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GreenLightTests-Info.plist"; sourceTree = "<group>"; };
@@ -172,6 +173,8 @@
 		28CF00AD178215A500144660 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		28CF00AE178215A500144660 /* FeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedController.h; sourceTree = "<group>"; };
 		28CF00AF178215A500144660 /* FeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedController.m; sourceTree = "<group>"; };
+		28CF00B21782167B00144660 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		28CF00B31782167B00144660 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -314,8 +317,8 @@
 				28C033FC1767E35A00C25E12 /* AppDelegate.h */,
 				28C033FD1767E35A00C25E12 /* AppDelegate.m */,
 				28C034051767E35A00C25E12 /* MainStoryboard.storyboard */,
-				28C034081767E35A00C25E12 /* ViewController.h */,
-				28C034091767E35A00C25E12 /* ViewController.m */,
+				28C034081767E35A00C25E12 /* HomeViewController.h */,
+				28C034091767E35A00C25E12 /* HomeViewController.m */,
 				28C033F41767E35A00C25E12 /* Supporting Files */,
 				28C034281767E6FD00C25E12 /* GreenLightService.h */,
 				28C034291767E6FD00C25E12 /* GreenLightService.m */,
@@ -328,6 +331,8 @@
 				2815D06E177366FA001FF5F9 /* Model.xcdatamodeld */,
 				2815D07117736814001FF5F9 /* User.h */,
 				2815D07217736814001FF5F9 /* User.m */,
+				28CF00B21782167B00144660 /* AboutViewController.h */,
+				28CF00B31782167B00144660 /* AboutViewController.m */,
 			);
 			path = GreenLight;
 			sourceTree = "<group>";
@@ -573,7 +578,7 @@
 			files = (
 				28C033FA1767E35A00C25E12 /* main.m in Sources */,
 				28C033FE1767E35A00C25E12 /* AppDelegate.m in Sources */,
-				28C0340A1767E35A00C25E12 /* ViewController.m in Sources */,
+				28C0340A1767E35A00C25E12 /* HomeViewController.m in Sources */,
 				28C0342A1767E6FD00C25E12 /* GreenLightService.m in Sources */,
 				2815D06217721E26001FF5F9 /* GreenlightHelper.m in Sources */,
 				2815D070177366FA001FF5F9 /* Model.xcdatamodeld in Sources */,
@@ -589,6 +594,7 @@
 				28CF00AA1782081400144660 /* RCSwitchOnOff.m in Sources */,
 				28CF00B0178215A500144660 /* FeedCell.m in Sources */,
 				28CF00B1178215A500144660 /* FeedController.m in Sources */,
+				28CF00B41782167D00144660 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
