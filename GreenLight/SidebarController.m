@@ -56,13 +56,12 @@
     self.profileImageView.layer.cornerRadius = 35.0f;
 
     
-    NSDictionary* object1 = [NSDictionary dictionaryWithObjects:@[ @"Inbox", @"7", @"envelope" ] forKeys:@[ @"title", @"count", @"icon" ]];
-    NSDictionary* object2 = [NSDictionary dictionaryWithObjects:@[ @"Updates", @"7", @"check" ] forKeys:@[ @"title", @"count", @"icon" ]];
-    NSDictionary* object3 = [NSDictionary dictionaryWithObjects:@[ @"Account", @"0", @"account" ] forKeys:@[ @"title", @"count", @"icon" ]];
-    NSDictionary* object4 = [NSDictionary dictionaryWithObjects:@[ @"Settings", @"0", @"settings" ] forKeys:@[ @"title", @"count", @"icon" ]];
-    NSDictionary* object5 = [NSDictionary dictionaryWithObjects:@[ @"Logout", @"0", @"arrow" ] forKeys:@[ @"title", @"count", @"icon" ]];
+    NSDictionary* object1 = [NSDictionary dictionaryWithObjects:@[ @"Home", @"0", @"account" ] forKeys:@[ @"title", @"count", @"icon" ]];
+    NSDictionary* object2 = [NSDictionary dictionaryWithObjects:@[ @"Activity", @"0", @"check" ] forKeys:@[ @"title", @"count", @"icon" ]];
+    NSDictionary* object3 = [NSDictionary dictionaryWithObjects:@[ @"Settings", @"0", @"settings" ] forKeys:@[ @"title", @"count", @"icon" ]];
+    NSDictionary* object4 = [NSDictionary dictionaryWithObjects:@[ @"About", @"0", @"arrow" ] forKeys:@[ @"title", @"count", @"icon" ]];
     
-    self.items = @[object1, object2, object3, object4, object5];
+    self.items = @[object1, object2, object3, object4];
 	
 }
 

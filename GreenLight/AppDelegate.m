@@ -35,18 +35,15 @@
     
     [FlatTheme styleNavigationBarWithFontName:@"Avenir" andColor:[UIColor colorWithWhite:0.4f alpha:1.0f]];
     
-    
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SidebarStoryboard" bundle:nil];
-    
     self.revealController = [[GHRevealViewController alloc] initWithNibName:nil bundle:nil];
     
-    UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"SidebarStoryboard" bundle:nil];
+    UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     MainSideViewController *mainVC = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"MainSideViewController"];
     mainVC.revealBlock = revealBlock;
     
     UIViewController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     revealController.contentViewController = nav;
-    revealController.sidebarViewController = [sb instantiateViewControllerWithIdentifier:@"SidebarController1"];
+    revealController.sidebarViewController = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"SidebarController1"];
     
     self.window.rootViewController = revealController;
     
