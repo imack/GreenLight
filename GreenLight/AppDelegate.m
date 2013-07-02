@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "MagicalRecord.h"
-#import "MainSideViewController.h"
 #import "SidebarController.h"
 #import "FlatTheme.h"
 #import "GHSidebarSearchViewControllerDelegate.h"
@@ -34,14 +33,12 @@
     self.revealController = [[GHRevealViewController alloc] initWithNibName:nil bundle:nil];
     
     UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    MainSideViewController *mainVC = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"MainSideViewController"];
-    mainVC.revealController = revealController;
     
     SidebarController *sidebarController = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"SidebarController1"];
-    UIViewController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    revealController.contentViewController = nav;
-    revealController.sidebarViewController = sidebarController;
     sidebarController.revealController = revealController;
+    revealController.sidebarViewController = sidebarController;
+    revealController.contentViewController = sidebarController.initialController;
+    
     
     self.window.rootViewController = revealController;
     

@@ -53,8 +53,8 @@
     [FlatTheme styleNavigationBarWithFontName:self.boldFontName andColor:self.onColor];
     [FlatTheme styleSegmentedControlWithFontName:self.boldFontName andSelectedColor:self.onColor andUnselectedColor:self.offColor andDidviderColor:self.dividerColor];
     
-    self.navigationItem.leftBarButtonItem = [Utils getMenuItem];
-    self.navigationItem.rightBarButtonItem  = [Utils getSearchButtonItem];
+    //self.navigationItem.leftBarButtonItem = [Utils getMenuItem];
+    //self.navigationItem.rightBarButtonItem  = [Utils getSearchButtonItem];
     
     self.title = @"Settings";
     

@@ -18,7 +18,7 @@
 @end
 
 @implementation SidebarController {
-	__weak GHRevealViewController *_revealController;
+	GHRevealViewController *_revealController;
 	UISearchBar *_searchBar;
 	UITableView *_menuTableView;
 	NSArray *_headers;
@@ -29,11 +29,28 @@
 @synthesize revealController=_revealController;
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+-(id) initWithCoder:(NSCoder *)aDecoder{
+    
+    
+    self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
+        NSDictionary* object1 = [NSDictionary dictionaryWithObjects:@[ @"Home", @"0", @"account" ] forKeys:@[ @"title", @"count", @"icon" ]];
+        NSDictionary* object2 = [NSDictionary dictionaryWithObjects:@[ @"Activity", @"0", @"check" ] forKeys:@[ @"title", @"count", @"icon" ]];
+        NSDictionary* object3 = [NSDictionary dictionaryWithObjects:@[ @"Settings", @"0", @"settings" ] forKeys:@[ @"title", @"count", @"icon" ]];
+        NSDictionary* object4 = [NSDictionary dictionaryWithObjects:@[ @"About", @"0", @"arrow" ] forKeys:@[ @"title", @"count", @"icon" ]];
+        
+        self.items = @[object1, object2, object3, object4];
+        
+        UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        
+        NSArray *controllers = @[
+                                 [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"HomeViewController"]],
+                                 [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"FeedViewController"]],
+                                 [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"SettingsController"]],
+                                 [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"AboutViewController"]]
+                                 ];    
+        _controllers = controllers;
     }
     return self;
 }
@@ -65,24 +82,11 @@
     self.profileImageView.layer.borderWidth = 4.0f;
     self.profileImageView.layer.borderColor = [UIColor colorWithWhite:1.0f alpha:0.5f].CGColor;
     self.profileImageView.layer.cornerRadius = 35.0f;
-
     
-    NSDictionary* object1 = [NSDictionary dictionaryWithObjects:@[ @"Home", @"0", @"account" ] forKeys:@[ @"title", @"count", @"icon" ]];
-    NSDictionary* object2 = [NSDictionary dictionaryWithObjects:@[ @"Activity", @"0", @"check" ] forKeys:@[ @"title", @"count", @"icon" ]];
-    NSDictionary* object3 = [NSDictionary dictionaryWithObjects:@[ @"Settings", @"0", @"settings" ] forKeys:@[ @"title", @"count", @"icon" ]];
-    NSDictionary* object4 = [NSDictionary dictionaryWithObjects:@[ @"About", @"0", @"arrow" ] forKeys:@[ @"title", @"count", @"icon" ]];
-    
-    self.items = @[object1, object2, object3, object4];
-    
-    UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    
-    NSArray *controllers = @[                             
-                [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"HomeViewController"]],
-                [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"FeedViewController"]],
-                [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"SettingsController"]],
-                [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"AboutViewController"]]
-                        ];    
-    _controllers = controllers;
+    for (UIViewController *navcontroller in _controllers){
+        ApplicationViewController * controller = navcontroller.childViewControllers[0];
+        controller.revealController = _revealController;
+    }
 	
 }
 
@@ -93,11 +97,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	UINavigationController *navcontroller = _controllers[indexPath.row];
-    _revealController.contentViewController = navcontroller;
-    ApplicationViewController *controller = (ApplicationViewController*)navcontroller.childViewControllers[0];
-    controller.revealController = _revealController;
-    
+    _revealController.contentViewController = _controllers[indexPath.row];
 	[_revealController toggleSidebar:NO duration:kGHRevealSidebarDefaultAnimationDuration];
 }
 
@@ -130,5 +130,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(ApplicationViewController*) initialController {    
+    return _controllers[0];
+    
+}
+
 
 @end

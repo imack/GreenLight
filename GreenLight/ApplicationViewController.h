@@ -13,11 +13,11 @@ typedef void (^RevealBlock)();
 
 @interface ApplicationViewController : UIViewController{
     @private
-    GHRevealViewController *_revealController;
+    __weak GHRevealViewController *_revealController;
     
 }
 
-@property (nonatomic, strong) GHRevealViewController *revealController;
+@property (nonatomic, weak) GHRevealViewController *revealController;
 
 
 @end

@@ -18,6 +18,8 @@
 
 @property (nonatomic, weak) IBOutlet UIImageView* profileImageView;
 
-@property (nonatomic, weak) UIViewController* revealController;
+@property (nonatomic, strong) UIViewController* revealController;
+
+-(UIViewController*) initialController; //for what should be first shown
 
 @end

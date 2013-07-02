@@ -12,7 +12,6 @@
 		2815D07317736814001FF5F9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D07217736814001FF5F9 /* User.m */; };
 		2815D07E177373E7001FF5F9 /* SidebarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D079177373E7001FF5F9 /* SidebarCell.m */; };
 		2815D07F177373E7001FF5F9 /* SidebarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D07B177373E7001FF5F9 /* SidebarController.m */; };
-		2815D080177373E7001FF5F9 /* MainSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D07D177373E7001FF5F9 /* MainSideViewController.m */; };
 		2815D0A4177374AE001FF5F9 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815D083177374AE001FF5F9 /* account.png */; };
 		2815D0A5177374AE001FF5F9 /* account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815D084177374AE001FF5F9 /* account@2x.png */; };
 		2815D0A6177374AE001FF5F9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815D085177374AE001FF5F9 /* settings.png */; };
@@ -98,8 +97,6 @@
 		2815D079177373E7001FF5F9 /* SidebarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarCell.m; sourceTree = "<group>"; };
 		2815D07A177373E7001FF5F9 /* SidebarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarController.h; sourceTree = "<group>"; };
 		2815D07B177373E7001FF5F9 /* SidebarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarController.m; sourceTree = "<group>"; };
-		2815D07C177373E7001FF5F9 /* MainSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSideViewController.h; sourceTree = "<group>"; };
-		2815D07D177373E7001FF5F9 /* MainSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSideViewController.m; sourceTree = "<group>"; };
 		2815D083177374AE001FF5F9 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
 		2815D084177374AE001FF5F9 /* account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account@2x.png"; sourceTree = "<group>"; };
 		2815D085177374AE001FF5F9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
@@ -221,8 +218,6 @@
 				2815D079177373E7001FF5F9 /* SidebarCell.m */,
 				2815D07A177373E7001FF5F9 /* SidebarController.h */,
 				2815D07B177373E7001FF5F9 /* SidebarController.m */,
-				2815D07C177373E7001FF5F9 /* MainSideViewController.h */,
-				2815D07D177373E7001FF5F9 /* MainSideViewController.m */,
 			);
 			name = Sidebar;
 			sourceTree = "<group>";
@@ -590,7 +585,6 @@
 				2815D07317736814001FF5F9 /* User.m in Sources */,
 				2815D07E177373E7001FF5F9 /* SidebarCell.m in Sources */,
 				2815D07F177373E7001FF5F9 /* SidebarController.m in Sources */,
-				2815D080177373E7001FF5F9 /* MainSideViewController.m in Sources */,
 				2815D0C9177377FB001FF5F9 /* Utils.m in Sources */,
 				2815D0CA177377FB001FF5F9 /* FlatTheme.m in Sources */,
 				28CF00A21782078F00144660 /* SettingsController.m in Sources */,

@@ -9,7 +9,6 @@
 #import "HomeViewController.h"
 #import "GreenLightService.h"
 #import "User.h"
-#import "MainSideViewController.h"
 
 #import "GHSidebarSearchViewController.h"
 #import "GHRevealViewController.h"
