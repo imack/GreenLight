@@ -104,14 +104,6 @@
     UIBarButtonItem* searchItem = [[UIBarButtonItem alloc] initWithCustomView:searchView];
     
     self.navigationItem.rightBarButtonItem = searchItem;
-    
-    
-    UIImageView* menuView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"menu.png"]];
-    menuView.frame = CGRectMake(0, 0, 28, 20);
-    
-    UIBarButtonItem* menuItem = [[UIBarButtonItem alloc] initWithCustomView:menuView];
-    
-    self.navigationItem.leftBarButtonItem = menuItem;
 }
 
 

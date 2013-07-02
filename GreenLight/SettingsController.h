@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsController : UIViewController  <UITableViewDataSource, UITableViewDelegate>
+@interface SettingsController : ApplicationViewController  <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView* tableView;
 

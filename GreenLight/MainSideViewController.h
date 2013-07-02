@@ -8,16 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "GHRevealViewController.h"
-typedef void (^RevealBlock)();
 
-@interface MainSideViewController : UIViewController{
-@private
-	RevealBlock _revealBlock;
+
+@interface MainSideViewController : ApplicationViewController{
+
 }
-
-- (id)initWithTitle:(NSString *)title withRevealBlock:(RevealBlock)revealBlock;
-
-@property (nonatomic, strong) RevealBlock revealBlock;
-@property (nonatomic, strong) NSString* controllerId;
 
 @end

@@ -11,14 +11,9 @@
 #import "FlatTheme.h"
 #import "Utils.h"
 
-@interface MainSideViewController ()
-
-@end
-
 @implementation MainSideViewController
 
 
-@synthesize revealBlock=_revealBlock;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,19 +23,10 @@
     [frontController.view setFrame:CGRectMake(0,0, 320, 640)];
     [self.view addSubview:frontController.view];
     
-    UIButton* menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 28, 20)];
-    [menuButton setBackgroundImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
-    [menuButton addTarget:self action:@selector(revealSidebar:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem* menuItem = [[UIBarButtonItem alloc] initWithCustomView:menuButton];
-    
-    self.navigationItem.leftBarButtonItem = menuItem;
 }
 
 
-- (void)revealSidebar:(id)sender {
-	_revealBlock();
-}
+
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

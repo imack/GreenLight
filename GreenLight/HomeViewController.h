@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GreenLightService.h"
 
-@interface HomeViewController : UIViewController<GreenLightServiceDelegate>{
+@interface HomeViewController : ApplicationViewController<GreenLightServiceDelegate>{
     UILabel *serviceLabel;
     GreenLightService *service;
     

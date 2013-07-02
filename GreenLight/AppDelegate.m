@@ -28,10 +28,6 @@
     // Override point for customization after application launch.
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"GreenLightDatabase.sqlite"];
     
-    RevealBlock revealBlock = ^(){
-		[self.revealController toggleSidebar:!self.revealController.sidebarShowing
-									duration:kGHRevealSidebarDefaultAnimationDuration];
-	};
     
     [FlatTheme styleNavigationBarWithFontName:@"Avenir" andColor:[UIColor colorWithWhite:0.4f alpha:1.0f]];
     
@@ -39,11 +35,13 @@
     
     UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     MainSideViewController *mainVC = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"MainSideViewController"];
-    mainVC.revealBlock = revealBlock;
+    mainVC.revealController = revealController;
     
+    SidebarController *sidebarController = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"SidebarController1"];
     UIViewController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     revealController.contentViewController = nav;
-    revealController.sidebarViewController = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"SidebarController1"];
+    revealController.sidebarViewController = sidebarController;
+    sidebarController.revealController = revealController;
     
     self.window.rootViewController = revealController;
     

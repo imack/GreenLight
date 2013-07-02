@@ -18,4 +18,6 @@
 
 @property (nonatomic, weak) IBOutlet UIImageView* profileImageView;
 
+@property (nonatomic, weak) UIViewController* revealController;
+
 @end

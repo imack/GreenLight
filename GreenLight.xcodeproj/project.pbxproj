@@ -73,6 +73,7 @@
 		28CF00B0178215A500144660 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00AD178215A500144660 /* FeedCell.m */; };
 		28CF00B1178215A500144660 /* FeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00AF178215A500144660 /* FeedController.m */; };
 		28CF00B41782167D00144660 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B31782167B00144660 /* AboutViewController.m */; };
+		28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B61783397E00144660 /* ApplicationViewController.m */; };
 		40E72BB69B524FBC907FCB35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1368908B6B2B444681FFC0AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -175,6 +176,8 @@
 		28CF00AF178215A500144660 /* FeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedController.m; sourceTree = "<group>"; };
 		28CF00B21782167B00144660 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		28CF00B31782167B00144660 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		28CF00B51783397D00144660 /* ApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
+		28CF00B61783397E00144660 /* ApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
 		E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -333,6 +336,8 @@
 				2815D07217736814001FF5F9 /* User.m */,
 				28CF00B21782167B00144660 /* AboutViewController.h */,
 				28CF00B31782167B00144660 /* AboutViewController.m */,
+				28CF00B51783397D00144660 /* ApplicationViewController.h */,
+				28CF00B61783397E00144660 /* ApplicationViewController.m */,
 			);
 			path = GreenLight;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 				28CF00B0178215A500144660 /* FeedCell.m in Sources */,
 				28CF00B1178215A500144660 /* FeedController.m in Sources */,
 				28CF00B41782167D00144660 /* AboutViewController.m in Sources */,
+				28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "SidebarController.h"
 #import "SidebarCell.h"
+#import "GHRevealViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface SidebarController ()
@@ -16,7 +17,17 @@
 
 @end
 
-@implementation SidebarController
+@implementation SidebarController {
+	__weak GHRevealViewController *_revealController;
+	UISearchBar *_searchBar;
+	UITableView *_menuTableView;
+	NSArray *_headers;
+	NSArray *_controllers;
+	NSArray *_cellInfos;
+    
+}
+@synthesize revealController=_revealController;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -62,12 +73,32 @@
     NSDictionary* object4 = [NSDictionary dictionaryWithObjects:@[ @"About", @"0", @"arrow" ] forKeys:@[ @"title", @"count", @"icon" ]];
     
     self.items = @[object1, object2, object3, object4];
+    
+    UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    
+    NSArray *controllers = @[                             
+                [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"HomeViewController"]],
+                [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"FeedViewController"]],
+                [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"SettingsController"]],
+                [[UINavigationController alloc] initWithRootViewController:[sidebarStoryboard instantiateViewControllerWithIdentifier:@"AboutViewController"]]
+                        ];    
+    _controllers = controllers;
 	
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return 4;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	UINavigationController *navcontroller = _controllers[indexPath.row];
+    _revealController.contentViewController = navcontroller;
+    ApplicationViewController *controller = (ApplicationViewController*)navcontroller.childViewControllers[0];
+    controller.revealController = _revealController;
+    
+	[_revealController toggleSidebar:NO duration:kGHRevealSidebarDefaultAnimationDuration];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
