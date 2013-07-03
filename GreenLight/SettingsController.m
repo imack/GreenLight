@@ -10,6 +10,7 @@
 #import "Utils.h"
 #import "RCSwitchOnOff.h"
 #import "FlatTheme.h"
+#import "EditableTableCell.h"
 
 @interface SettingsController ()
 
@@ -42,9 +43,7 @@
 {
     [super viewDidLoad];
 	
-    
     self.boldFontName = @"Avenir-Black";
-    
     
     self.onColor = [UIColor colorWithRed:222.0/255 green:59.0/255 blue:47.0/255 alpha:1.0f];
     self.offColor = [UIColor colorWithRed:242.0/255 green:228.0/255 blue:227.0/255 alpha:1.0];
@@ -58,33 +57,33 @@
     
     self.title = @"Settings";
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 568) style:UITableViewStyleGrouped];
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
-    [self.view addSubview:self.tableView];
-    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.backgroundView = nil;
-
     
     self.tableView.backgroundColor = [UIColor colorWithRed:231.0/255 green:235.0/255 blue:238.0/255 alpha:1.0f];
     self.tableView.separatorColor = [UIColor clearColor];
     
-    self.settingTitles  = [NSArray arrayWithObjects:@"Bluetooth", @"Cloud backup", @"Show Offers", @"Streaming", @"Manage Accounts", nil];
+    self.settingTitles  = @[
+                            @[@"Background Scan", @"Show Alerts"],
+                            @[@"Name", @"Max Age", @"Min Age", @"Description"],
+                            @[@"Reset"]
+                        ];
     
-    self.settingsElements = [NSArray arrayWithObjects:@"None", @"Switch", @"Segment", @"None", @"None", nil];
+    self.settingsElements  = @[
+                            @[@"Switch", @"Switch"],
+                            @[@"String", @"Integer", @"Integer", @"String"],
+                            @[@"Alert"]
+                            ];
     
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    return 2;
+    return [self.settingTitles count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return 4;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{    
+    return [[self.settingTitles objectAtIndex:section] count];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -98,7 +97,17 @@
     label.font = [UIFont fontWithName:self.boldFontName size:20.0f];
     label.textColor = self.onColor;
     
-    label.text = section == 0 ? @"Account Settings" : @"User Information";
+    switch (section){
+        case 0:
+            label.text = @"Bluetooth";
+            break;
+        case 1:
+            label.text = @"User Info";
+            break;
+        case 2:
+            label.text = @"Account";
+            break;
+    }
     
     [headerView addSubview:label];
     
@@ -113,13 +122,14 @@
     
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
    
-    NSString* title = self.settingTitles[indexPath.row];
+    NSString* title = self.settingTitles[indexPath.section][indexPath.row];
+    NSString *CellIdentifier = @"ECELL";
     
     cell.textLabel.text = [title uppercaseString];
     cell.textLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0f];
     cell.textLabel.font = [UIFont fontWithName:self.boldFontName size:12.0f];
     
-    NSString* element = self.settingsElements[indexPath.row];
+    NSString* element = self.settingsElements[indexPath.section][indexPath.row];
     
     if([element isEqualToString:@"Switch"]){
         
@@ -132,11 +142,26 @@
         
         [cell addSubview:control];
     }
+    else if ([element isEqualToString:@"String"]){
+        
+        EditableTableCell *eCell;
+        
+        eCell = (EditableTableCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (eCell == nil) {
+            eCell = [[EditableTableCell alloc] initWithReuseIdentifier:CellIdentifier];
+        }
+        eCell.textField.placeholder = title;
+        cell = eCell;
+    }
     else{
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     return cell;
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:false];
 }
 
 -(RCSwitchOnOff*)createSwitch{

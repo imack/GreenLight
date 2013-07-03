@@ -73,6 +73,8 @@
 		28CF00B1178215A500144660 /* FeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00AF178215A500144660 /* FeedController.m */; };
 		28CF00B41782167D00144660 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B31782167B00144660 /* AboutViewController.m */; };
 		28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B61783397E00144660 /* ApplicationViewController.m */; };
+		28CF00BA1783C64500144660 /* EditableTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B91783C64500144660 /* EditableTableCell.m */; };
+		28CF00BD178485BD00144660 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */; };
 		40E72BB69B524FBC907FCB35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1368908B6B2B444681FFC0AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -175,6 +177,10 @@
 		28CF00B31782167B00144660 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		28CF00B51783397D00144660 /* ApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
 		28CF00B61783397E00144660 /* ApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
+		28CF00B81783C64500144660 /* EditableTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableCell.h; sourceTree = "<group>"; };
+		28CF00B91783C64500144660 /* EditableTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableCell.m; sourceTree = "<group>"; };
+		28CF00BB178485BD00144660 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -265,6 +271,8 @@
 		2815D0CB1777E06D001FF5F9 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				28CF00BB178485BD00144660 /* TPKeyboardAvoidingTableView.h */,
+				28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */,
 				28CF00A41782080700144660 /* RCSwitch */,
 			);
 			name = lib;
@@ -322,6 +330,8 @@
 				28C034291767E6FD00C25E12 /* GreenLightService.m */,
 				2815D06017721E26001FF5F9 /* GreenlightHelper.h */,
 				2815D06117721E26001FF5F9 /* GreenlightHelper.m */,
+				28CF00B81783C64500144660 /* EditableTableCell.h */,
+				28CF00B91783C64500144660 /* EditableTableCell.m */,
 				2815D0C5177377F9001FF5F9 /* Utils.h */,
 				2815D0C6177377FA001FF5F9 /* Utils.m */,
 				2815D0C7177377FA001FF5F9 /* FlatTheme.h */,
@@ -595,6 +605,8 @@
 				28CF00B1178215A500144660 /* FeedController.m in Sources */,
 				28CF00B41782167D00144660 /* AboutViewController.m in Sources */,
 				28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */,
+				28CF00BA1783C64500144660 /* EditableTableCell.m in Sources */,
+				28CF00BD178485BD00144660 /* TPKeyboardAvoidingTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
