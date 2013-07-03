@@ -13,7 +13,7 @@
 @interface User : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * twitter_id;
+@property (nonatomic, retain) NSString * user_bio;
 @property (nonatomic, retain) NSNumber * orientation;
 @property (nonatomic, retain) NSNumber * gender;
 @property (nonatomic, retain) NSNumber * current;

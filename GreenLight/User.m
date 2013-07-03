@@ -12,7 +12,7 @@
 @implementation User
 
 @dynamic name;
-@dynamic twitter_id;
+@dynamic user_bio;
 @dynamic orientation;
 @dynamic gender;
 @dynamic min_age;
