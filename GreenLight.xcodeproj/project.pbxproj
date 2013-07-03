@@ -75,6 +75,10 @@
 		28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B61783397E00144660 /* ApplicationViewController.m */; };
 		28CF00BA1783C64500144660 /* EditableTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B91783C64500144660 /* EditableTableCell.m */; };
 		28CF00BD178485BD00144660 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */; };
+		28CF00C5178498BF00144660 /* JLActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00C0178498BF00144660 /* JLActionButton.m */; };
+		28CF00C6178498BF00144660 /* JLActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00C2178498BF00144660 /* JLActionSheet.m */; };
+		28CF00C7178498BF00144660 /* JLActionSheetStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00C4178498BF00144660 /* JLActionSheetStyle.m */; };
+		28CF00C917849A3600144660 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF00C817849A3600144660 /* QuartzCore.framework */; };
 		40E72BB69B524FBC907FCB35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1368908B6B2B444681FFC0AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +185,13 @@
 		28CF00B91783C64500144660 /* EditableTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableCell.m; sourceTree = "<group>"; };
 		28CF00BB178485BD00144660 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
 		28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		28CF00BF178498BF00144660 /* JLActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLActionButton.h; sourceTree = "<group>"; };
+		28CF00C0178498BF00144660 /* JLActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLActionButton.m; sourceTree = "<group>"; };
+		28CF00C1178498BF00144660 /* JLActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLActionSheet.h; sourceTree = "<group>"; };
+		28CF00C2178498BF00144660 /* JLActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLActionSheet.m; sourceTree = "<group>"; };
+		28CF00C3178498BF00144660 /* JLActionSheetStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLActionSheetStyle.h; sourceTree = "<group>"; };
+		28CF00C4178498BF00144660 /* JLActionSheetStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLActionSheetStyle.m; sourceTree = "<group>"; };
+		28CF00C817849A3600144660 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -189,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CF00C917849A3600144660 /* QuartzCore.framework in Frameworks */,
 				28C0342C1767E71F00C25E12 /* CoreBluetooth.framework in Frameworks */,
 				28C033EE1767E35A00C25E12 /* UIKit.framework in Frameworks */,
 				28C033F01767E35A00C25E12 /* Foundation.framework in Frameworks */,
@@ -271,6 +283,7 @@
 		2815D0CB1777E06D001FF5F9 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				28CF00BE178498BF00144660 /* JLActionSheet */,
 				28CF00BB178485BD00144660 /* TPKeyboardAvoidingTableView.h */,
 				28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */,
 				28CF00A41782080700144660 /* RCSwitch */,
@@ -301,6 +314,7 @@
 		28C033EC1767E35A00C25E12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28CF00C817849A3600144660 /* QuartzCore.framework */,
 				28C0342B1767E71F00C25E12 /* CoreBluetooth.framework */,
 				28C033ED1767E35A00C25E12 /* UIKit.framework */,
 				28C033EF1767E35A00C25E12 /* Foundation.framework */,
@@ -411,6 +425,19 @@
 				28CF00AF178215A500144660 /* FeedController.m */,
 			);
 			name = Activities;
+			sourceTree = "<group>";
+		};
+		28CF00BE178498BF00144660 /* JLActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				28CF00BF178498BF00144660 /* JLActionButton.h */,
+				28CF00C0178498BF00144660 /* JLActionButton.m */,
+				28CF00C1178498BF00144660 /* JLActionSheet.h */,
+				28CF00C2178498BF00144660 /* JLActionSheet.m */,
+				28CF00C3178498BF00144660 /* JLActionSheetStyle.h */,
+				28CF00C4178498BF00144660 /* JLActionSheetStyle.m */,
+			);
+			path = JLActionSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,6 +634,9 @@
 				28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */,
 				28CF00BA1783C64500144660 /* EditableTableCell.m in Sources */,
 				28CF00BD178485BD00144660 /* TPKeyboardAvoidingTableView.m in Sources */,
+				28CF00C5178498BF00144660 /* JLActionButton.m in Sources */,
+				28CF00C6178498BF00144660 /* JLActionSheet.m in Sources */,
+				28CF00C7178498BF00144660 /* JLActionSheetStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
