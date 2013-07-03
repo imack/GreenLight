@@ -11,6 +11,7 @@
 #import "SidebarController.h"
 #import "FlatTheme.h"
 #import "GHSidebarSearchViewControllerDelegate.h"
+#import "User.h"
 
 @interface AppDelegate () 
 @property (nonatomic, strong) GHRevealViewController *revealController;
@@ -27,7 +28,28 @@
     // Override point for customization after application launch.
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"GreenLightDatabase.sqlite"];
     
+    [GreenlightHelper initDefaults];
     
+    User *user = [User MR_findFirstByAttribute:@"current" withValue:[NSNumber numberWithBool:true]];
+    
+    if (user){
+        [self showMainStory];
+        
+    } else {
+        UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil];
+        
+        SidebarController *signupController = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"SignupController"];
+        
+        self.window.rootViewController = signupController;
+        
+    }
+    
+
+    
+    return YES;
+}
+
+-(void) showMainStory{
     [FlatTheme styleNavigationBarWithFontName:@"Avenir" andColor:[UIColor colorWithWhite:0.4f alpha:1.0f]];
     
     self.revealController = [[GHRevealViewController alloc] initWithNibName:nil bundle:nil];
@@ -39,10 +61,7 @@
     revealController.sidebarViewController = sidebarController;
     revealController.contentViewController = sidebarController.initialController;
     
-    
     self.window.rootViewController = revealController;
-    
-    return YES;
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{

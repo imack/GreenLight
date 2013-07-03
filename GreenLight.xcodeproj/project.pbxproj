@@ -79,6 +79,9 @@
 		28CF00C6178498BF00144660 /* JLActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00C2178498BF00144660 /* JLActionSheet.m */; };
 		28CF00C7178498BF00144660 /* JLActionSheetStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00C4178498BF00144660 /* JLActionSheetStyle.m */; };
 		28CF00C917849A3600144660 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF00C817849A3600144660 /* QuartzCore.framework */; };
+		28CF00CB1784A24F00144660 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CF00CA1784A24F00144660 /* LoginStoryboard.storyboard */; };
+		28CF00D11784A29400144660 /* SignupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00CE1784A29400144660 /* SignupController.m */; };
+		28CF00D51784A72F00144660 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00D41784A72F00144660 /* TPKeyboardAvoidingScrollView.m */; };
 		40E72BB69B524FBC907FCB35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1368908B6B2B444681FFC0AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +195,11 @@
 		28CF00C3178498BF00144660 /* JLActionSheetStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLActionSheetStyle.h; sourceTree = "<group>"; };
 		28CF00C4178498BF00144660 /* JLActionSheetStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLActionSheetStyle.m; sourceTree = "<group>"; };
 		28CF00C817849A3600144660 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		28CF00CA1784A24F00144660 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		28CF00CD1784A29400144660 /* SignupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupController.h; sourceTree = "<group>"; };
+		28CF00CE1784A29400144660 /* SignupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupController.m; sourceTree = "<group>"; };
+		28CF00D31784A72F00144660 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		28CF00D41784A72F00144660 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -225,6 +233,8 @@
 		2815D0741773720B001FF5F9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				28C034051767E35A00C25E12 /* MainStoryboard.storyboard */,
+				28CF00CA1784A24F00144660 /* LoginStoryboard.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -286,6 +296,8 @@
 				28CF00BE178498BF00144660 /* JLActionSheet */,
 				28CF00BB178485BD00144660 /* TPKeyboardAvoidingTableView.h */,
 				28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */,
+				28CF00D31784A72F00144660 /* TPKeyboardAvoidingScrollView.h */,
+				28CF00D41784A72F00144660 /* TPKeyboardAvoidingScrollView.m */,
 				28CF00A41782080700144660 /* RCSwitch */,
 			);
 			name = lib;
@@ -328,6 +340,7 @@
 		28C033F31767E35A00C25E12 /* GreenLight */ = {
 			isa = PBXGroup;
 			children = (
+				28CF00CC1784A27700144660 /* Signup */,
 				28CF00AB1782159800144660 /* Activities */,
 				28CF009D1782078200144660 /* Settings */,
 				2815D0CB1777E06D001FF5F9 /* lib */,
@@ -336,7 +349,6 @@
 				2815D0741773720B001FF5F9 /* Storyboards */,
 				28C033FC1767E35A00C25E12 /* AppDelegate.h */,
 				28C033FD1767E35A00C25E12 /* AppDelegate.m */,
-				28C034051767E35A00C25E12 /* MainStoryboard.storyboard */,
 				28C034081767E35A00C25E12 /* HomeViewController.h */,
 				28C034091767E35A00C25E12 /* HomeViewController.m */,
 				28C033F41767E35A00C25E12 /* Supporting Files */,
@@ -438,6 +450,15 @@
 				28CF00C4178498BF00144660 /* JLActionSheetStyle.m */,
 			);
 			path = JLActionSheet;
+			sourceTree = "<group>";
+		};
+		28CF00CC1784A27700144660 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				28CF00CD1784A29400144660 /* SignupController.h */,
+				28CF00CE1784A29400144660 /* SignupController.m */,
+			);
+			name = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,6 +572,7 @@
 				2815D0C2177374AE001FF5F9 /* mail@2x.png in Resources */,
 				2815D0C3177374AE001FF5F9 /* check.png in Resources */,
 				2815D0C4177374AE001FF5F9 /* check@2x.png in Resources */,
+				28CF00CB1784A24F00144660 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +659,8 @@
 				28CF00C5178498BF00144660 /* JLActionButton.m in Sources */,
 				28CF00C6178498BF00144660 /* JLActionSheet.m in Sources */,
 				28CF00C7178498BF00144660 /* JLActionSheetStyle.m in Sources */,
+				28CF00D11784A29400144660 /* SignupController.m in Sources */,
+				28CF00D51784A72F00144660 /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

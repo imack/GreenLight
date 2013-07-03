@@ -10,5 +10,7 @@
 
 @interface GreenlightHelper : NSObject
 
++(void) initDefaults;
+
 
 @end

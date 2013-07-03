@@ -87,7 +87,6 @@
         ApplicationViewController * controller = navcontroller.childViewControllers[0];
         controller.revealController = _revealController;
     }
-	
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

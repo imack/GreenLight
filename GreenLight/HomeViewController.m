@@ -30,10 +30,11 @@
     
     service = [[GreenLightService alloc] init];
     service.delegate = self;
+ 
     
-    User *current_user = [User MR_findFirstByAttribute:@"current" withValue:[NSNumber numberWithInt:1]];
     
 }
+
 
 -(void) update:(NSString*)update{
     self.serviceLabel.text = update;
