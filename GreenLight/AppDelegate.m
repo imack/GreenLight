@@ -12,6 +12,7 @@
 #import "FlatTheme.h"
 #import "GHSidebarSearchViewControllerDelegate.h"
 #import "User.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate () 
 @property (nonatomic, strong) GHRevealViewController *revealController;
@@ -44,6 +45,10 @@
         
     }
     
+    [Parse setApplicationId:@"dlS34ZRE6TxpC9lNqiVJ0GnouYZBFuidXX93bkt9"
+                  clientKey:@"Pf240BGzxqk9BSBdgEjZAdD9qgdVAZ9xtAna27uI"];
+
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
     
     return YES;
