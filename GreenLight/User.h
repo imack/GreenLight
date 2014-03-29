@@ -12,13 +12,22 @@
 
 @interface User : NSManagedObject
 
+@property (nonatomic, retain) NSNumber * major;
+@property (nonatomic, retain) NSNumber * minor;
+@property (nonatomic, retain) NSNumber * user_id;
+
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * user_bio;
+@property (nonatomic, retain) NSDate * dob;
+
 @property (nonatomic, retain) NSNumber * orientation;
 @property (nonatomic, retain) NSNumber * gender;
+@property (nonatomic, retain) NSNumber * prompt;
 @property (nonatomic, retain) NSNumber * current;
 @property (nonatomic, retain) NSNumber * min_age;
 @property (nonatomic, retain) NSNumber * max_age;
 @property (nonatomic, retain) NSNumber * status;
+@property (nonatomic, retain) NSDate * last_seen;
+
 
 @end

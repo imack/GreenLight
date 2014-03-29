@@ -17,3 +17,11 @@
 #import "CoreData+MagicalRecord.h"
 #import "GreenlightHelper.h"
 #import "ApplicationViewController.h"
+
+#import "SharedConstants.h"
+#import "CredentialStore.h"
+#import "AFNetworking.h"
+#import "AuthClient.h"
+#import <CoreLocation/CoreLocation.h>
+
+

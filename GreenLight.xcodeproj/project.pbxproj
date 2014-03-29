@@ -47,6 +47,9 @@
 		2815D0C4177374AE001FF5F9 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2815D0A3177374AE001FF5F9 /* check@2x.png */; };
 		2815D0C9177377FB001FF5F9 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D0C6177377FA001FF5F9 /* Utils.m */; };
 		2815D0CA177377FB001FF5F9 /* FlatTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D0C8177377FB001FF5F9 /* FlatTheme.m */; };
+		282F71DF18E776B500E10D26 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282F71DE18E776B500E10D26 /* Crashlytics.framework */; };
+		283A57CF18E607A700F5C169 /* CredentialStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 283A57CD18E607A700F5C169 /* CredentialStore.m */; };
+		283A57D618E6082B00F5C169 /* AuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 283A57D418E6082B00F5C169 /* AuthClient.m */; };
 		28C033EE1767E35A00C25E12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033ED1767E35A00C25E12 /* UIKit.framework */; };
 		28C033F01767E35A00C25E12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033EF1767E35A00C25E12 /* Foundation.framework */; };
 		28C033F21767E35A00C25E12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033F11767E35A00C25E12 /* CoreGraphics.framework */; };
@@ -63,7 +66,6 @@
 		28C034141767E35A00C25E12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033EF1767E35A00C25E12 /* Foundation.framework */; };
 		28C0341C1767E35A00C25E12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28C0341A1767E35A00C25E12 /* InfoPlist.strings */; };
 		28C0341F1767E35A00C25E12 /* GreenLightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C0341E1767E35A00C25E12 /* GreenLightTests.m */; };
-		28C0342A1767E6FD00C25E12 /* GreenLightService.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C034291767E6FD00C25E12 /* GreenLightService.m */; };
 		28C0342C1767E71F00C25E12 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C0342B1767E71F00C25E12 /* CoreBluetooth.framework */; };
 		28CF00A21782078F00144660 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF009F1782078F00144660 /* SettingsController.m */; };
 		28CF00A31782078F00144660 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00A11782078F00144660 /* SettingsCell.m */; };
@@ -143,6 +145,12 @@
 		2815D0C6177377FA001FF5F9 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		2815D0C7177377FA001FF5F9 /* FlatTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatTheme.h; sourceTree = "<group>"; };
 		2815D0C8177377FB001FF5F9 /* FlatTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlatTheme.m; sourceTree = "<group>"; };
+		282F71DE18E776B500E10D26 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		283A57CC18E5232A00F5C169 /* SharedConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedConstants.h; sourceTree = "<group>"; };
+		283A57CD18E607A700F5C169 /* CredentialStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialStore.m; sourceTree = "<group>"; };
+		283A57CE18E607A700F5C169 /* CredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialStore.h; sourceTree = "<group>"; };
+		283A57D418E6082B00F5C169 /* AuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthClient.m; sourceTree = "<group>"; };
+		283A57D518E6082B00F5C169 /* AuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthClient.h; sourceTree = "<group>"; };
 		28C033EA1767E35A00C25E12 /* GreenLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C033ED1767E35A00C25E12 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28C033EF1767E35A00C25E12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,8 +173,6 @@
 		28C0341B1767E35A00C25E12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		28C0341D1767E35A00C25E12 /* GreenLightTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GreenLightTests.h; sourceTree = "<group>"; };
 		28C0341E1767E35A00C25E12 /* GreenLightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreenLightTests.m; sourceTree = "<group>"; };
-		28C034281767E6FD00C25E12 /* GreenLightService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenLightService.h; sourceTree = "<group>"; };
-		28C034291767E6FD00C25E12 /* GreenLightService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenLightService.m; sourceTree = "<group>"; };
 		28C0342B1767E71F00C25E12 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		28CF009E1782078F00144660 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		28CF009F1782078F00144660 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 				28C033F01767E35A00C25E12 /* Foundation.framework in Frameworks */,
 				28C033F21767E35A00C25E12 /* CoreGraphics.framework in Frameworks */,
 				40E72BB69B524FBC907FCB35 /* libPods.a in Frameworks */,
+				282F71DF18E776B500E10D26 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +303,22 @@
 				28CF00BE178498BF00144660 /* JLActionSheet */,
 				28CF00BB178485BD00144660 /* TPKeyboardAvoidingTableView.h */,
 				28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */,
+				283A57CD18E607A700F5C169 /* CredentialStore.m */,
+				283A57CE18E607A700F5C169 /* CredentialStore.h */,
 				28CF00D31784A72F00144660 /* TPKeyboardAvoidingScrollView.h */,
 				28CF00D41784A72F00144660 /* TPKeyboardAvoidingScrollView.m */,
 				28CF00A41782080700144660 /* RCSwitch */,
 			);
 			name = lib;
+			sourceTree = "<group>";
+		};
+		283A57D018E607ED00F5C169 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2815D07117736814001FF5F9 /* User.h */,
+				2815D07217736814001FF5F9 /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		28C033E11767E35A00C25E12 = {
@@ -326,6 +344,7 @@
 		28C033EC1767E35A00C25E12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				282F71DE18E776B500E10D26 /* Crashlytics.framework */,
 				28CF00C817849A3600144660 /* QuartzCore.framework */,
 				28C0342B1767E71F00C25E12 /* CoreBluetooth.framework */,
 				28C033ED1767E35A00C25E12 /* UIKit.framework */,
@@ -340,6 +359,7 @@
 		28C033F31767E35A00C25E12 /* GreenLight */ = {
 			isa = PBXGroup;
 			children = (
+				283A57D018E607ED00F5C169 /* Models */,
 				28CF00CC1784A27700144660 /* Signup */,
 				28CF00AB1782159800144660 /* Activities */,
 				28CF009D1782078200144660 /* Settings */,
@@ -352,8 +372,8 @@
 				28C034081767E35A00C25E12 /* HomeViewController.h */,
 				28C034091767E35A00C25E12 /* HomeViewController.m */,
 				28C033F41767E35A00C25E12 /* Supporting Files */,
-				28C034281767E6FD00C25E12 /* GreenLightService.h */,
-				28C034291767E6FD00C25E12 /* GreenLightService.m */,
+				283A57D418E6082B00F5C169 /* AuthClient.m */,
+				283A57D518E6082B00F5C169 /* AuthClient.h */,
 				2815D06017721E26001FF5F9 /* GreenlightHelper.h */,
 				2815D06117721E26001FF5F9 /* GreenlightHelper.m */,
 				28CF00B81783C64500144660 /* EditableTableCell.h */,
@@ -363,8 +383,6 @@
 				2815D0C7177377FA001FF5F9 /* FlatTheme.h */,
 				2815D0C8177377FB001FF5F9 /* FlatTheme.m */,
 				2815D06E177366FA001FF5F9 /* Model.xcdatamodeld */,
-				2815D07117736814001FF5F9 /* User.h */,
-				2815D07217736814001FF5F9 /* User.m */,
 				28CF00B21782167B00144660 /* AboutViewController.h */,
 				28CF00B31782167B00144660 /* AboutViewController.m */,
 				28CF00B51783397D00144660 /* ApplicationViewController.h */,
@@ -376,6 +394,7 @@
 		28C033F41767E35A00C25E12 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				283A57CC18E5232A00F5C169 /* SharedConstants.h */,
 				28C033F51767E35A00C25E12 /* GreenLight-Info.plist */,
 				28C033F61767E35A00C25E12 /* InfoPlist.strings */,
 				28C033F91767E35A00C25E12 /* main.m */,
@@ -473,6 +492,7 @@
 				28C033E71767E35A00C25E12 /* Frameworks */,
 				28C033E81767E35A00C25E12 /* Resources */,
 				B8CF7E30E11B4BA9BA0B31BA /* Copy Pods Resources */,
+				282F71DD18E7752300E10D26 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -587,6 +607,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		282F71DD18E7752300E10D26 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run d5979dbb4d0dac0abc0004b2ee248b7e78c15f83 512ec279f06de6b756aca121dd3d85bee3c2e9e49736203f687a586424e81cd6\n";
+		};
 		28C0340E1767E35A00C25E12 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,7 +671,6 @@
 				28C033FA1767E35A00C25E12 /* main.m in Sources */,
 				28C033FE1767E35A00C25E12 /* AppDelegate.m in Sources */,
 				28C0340A1767E35A00C25E12 /* HomeViewController.m in Sources */,
-				28C0342A1767E6FD00C25E12 /* GreenLightService.m in Sources */,
 				2815D06217721E26001FF5F9 /* GreenlightHelper.m in Sources */,
 				2815D070177366FA001FF5F9 /* Model.xcdatamodeld in Sources */,
 				2815D07317736814001FF5F9 /* User.m in Sources */,
@@ -651,9 +683,11 @@
 				28CF00A91782081400144660 /* RCSwitch.m in Sources */,
 				28CF00AA1782081400144660 /* RCSwitchOnOff.m in Sources */,
 				28CF00B0178215A500144660 /* FeedCell.m in Sources */,
+				283A57CF18E607A700F5C169 /* CredentialStore.m in Sources */,
 				28CF00B1178215A500144660 /* FeedController.m in Sources */,
 				28CF00B41782167D00144660 /* AboutViewController.m in Sources */,
 				28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */,
+				283A57D618E6082B00F5C169 /* AuthClient.m in Sources */,
 				28CF00BA1783C64500144660 /* EditableTableCell.m in Sources */,
 				28CF00BD178485BD00144660 /* TPKeyboardAvoidingTableView.m in Sources */,
 				28CF00C5178498BF00144660 /* JLActionButton.m in Sources */,
@@ -770,9 +804,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GreenLight/GreenLight-Prefix.pch";
 				INFOPLIST_FILE = "GreenLight/GreenLight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -782,9 +821,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GreenLight/GreenLight-Prefix.pch";
 				INFOPLIST_FILE = "GreenLight/GreenLight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

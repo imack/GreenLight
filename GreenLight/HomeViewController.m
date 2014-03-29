@@ -7,13 +7,18 @@
 //
 
 #import "HomeViewController.h"
-#import "GreenLightService.h"
 #import "User.h"
 
 #import "GHSidebarSearchViewController.h"
 #import "GHRevealViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController (){
+    
+    CLLocationManager *_locationManager;
+    NSUUID *_uuid;
+    BOOL _notifyOnDisplay;
+}
+
 @property (nonatomic, strong) GHRevealViewController *revealController;
 @property (nonatomic, strong) GHSidebarSearchViewController *searchController;
 
@@ -28,16 +33,55 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    service = [[GreenLightService alloc] init];
-    service.delegate = self;
- 
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID] identifier:@"com.lokaloapp.LokaloApp"];
+    region = [_locationManager.monitoredRegions member:region];
+    if(region)
+    {
+        _uuid = region.proximityUUID;
+        _notifyOnDisplay = region.notifyEntryStateOnDisplay;
+        //self.onSwitch.on = true;
+        [_locationManager startMonitoringForRegion:region];
+    }
+    else
+    {
+        // Default settings.
+        _uuid =  [[NSUUID alloc] initWithUUIDString:LOKALO_UUID];
+        _notifyOnDisplay = NO;
+        //self.onSwitch.on = false;
+    }
     
 }
 
-
 -(void) update:(NSString*)update{
     self.serviceLabel.text = update;
+}
+
+
+-(IBAction)toggleSwitch:(id)sender{
+    /*
+    if( self.onSwitch.on )
+    {
+        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:_uuid identifier:@"com.lokaloapp.LokaloApp"];
+        
+        if(region)
+        {
+            region.notifyOnEntry = true;
+            region.notifyOnExit = true;
+            region.notifyEntryStateOnDisplay = _notifyOnDisplay;
+            
+            [_locationManager startMonitoringForRegion:region];
+        }
+    }
+    else
+    {
+        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID] identifier:@"com.lokaloapp.LokaloApp"];
+        [_locationManager stopMonitoringForRegion:region];
+    }
+     */
 }
 
 -(IBAction)doThing:(id)sender{

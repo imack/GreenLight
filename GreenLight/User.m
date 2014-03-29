@@ -11,6 +11,13 @@
 
 @implementation User
 
+@dynamic major;
+@dynamic minor;
+@dynamic user_id;
+@dynamic last_seen;
+@dynamic dob;
+
+@dynamic prompt;
 @dynamic name;
 @dynamic user_bio;
 @dynamic orientation;

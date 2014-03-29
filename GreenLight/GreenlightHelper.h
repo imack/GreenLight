@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface GreenlightHelper : NSObject
 
 +(void) initDefaults;
+
++(void) handleRangedBeacon:(CLBeacon*)beacon;
++(void) handleUserCheckinResponse:(NSInteger)buttonIndex for:(NSDictionary*)userInfo;
++(void) clearCheckins;
 
 
 @end
