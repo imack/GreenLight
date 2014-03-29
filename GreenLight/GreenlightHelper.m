@@ -16,6 +16,7 @@
 
 +(void) initDefaults{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     if ( ![defaults objectForKey:@"show_alerts"] ){
         [defaults setObject:[NSNumber numberWithBool:true] forKey:@"show_alerts"];
