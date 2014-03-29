@@ -27,6 +27,7 @@
 @implementation HomeViewController
 
 @synthesize serviceLabel;
+@synthesize enabledSwitch;
 
 - (void)viewDidLoad
 {
@@ -62,8 +63,8 @@
 
 
 -(IBAction)toggleSwitch:(id)sender{
-    /*
-    if( self.onSwitch.on )
+    
+    if( self.enabledSwitch.on )
     {
         CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:_uuid identifier:@"com.lokaloapp.LokaloApp"];
         
@@ -81,13 +82,6 @@
         CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID] identifier:@"com.lokaloapp.LokaloApp"];
         [_locationManager stopMonitoringForRegion:region];
     }
-     */
-}
-
--(IBAction)doThing:(id)sender{
-
-    
-    
 }
 
 - (void)didReceiveMemoryWarning

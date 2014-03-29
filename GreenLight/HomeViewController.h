@@ -14,8 +14,8 @@
 }
 
 @property(nonatomic, strong)  IBOutlet UILabel *serviceLabel;
-
--(IBAction)doThing:(id)sender;
+@property(nonatomic, strong) IBOutlet UISwitch *enabledSwitch;
+-(IBAction)toggleSwitch:(id)sender;
 
 
 @end
