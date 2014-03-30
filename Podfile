@@ -8,5 +8,7 @@ pod 'SSKeychain', '1.2.0'
 pod 'MagicalRecord'
 pod 'Parse', '~> 1.2.8'
 pod 'TestFlightSDK',  '~> 3.0.0'
+pod 'PixateFreestyle'
+pod 'TPKeyboardAvoiding', '~> 1.2.3'
 
 

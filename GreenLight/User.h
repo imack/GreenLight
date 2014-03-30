@@ -23,7 +23,6 @@
 @property (nonatomic, retain) NSNumber * orientation;
 @property (nonatomic, retain) NSNumber * gender;
 @property (nonatomic, retain) NSNumber * prompt;
-@property (nonatomic, retain) NSNumber * current;
 @property (nonatomic, retain) NSNumber * min_age;
 @property (nonatomic, retain) NSNumber * max_age;
 @property (nonatomic, retain) NSNumber * status;

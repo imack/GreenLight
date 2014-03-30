@@ -25,6 +25,5 @@
 @dynamic min_age;
 @dynamic max_age;
 @dynamic status;
-@dynamic current;
 
 @end

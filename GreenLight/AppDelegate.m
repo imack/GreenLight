@@ -37,29 +37,25 @@
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     [MagicalRecord setupAutoMigratingCoreDataStack];
+    [Parse setApplicationId:@"dlS34ZRE6TxpC9lNqiVJ0GnouYZBFuidXX93bkt9"
+                  clientKey:@"Pf240BGzxqk9BSBdgEjZAdD9qgdVAZ9xtAna27uI"];
     
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"GreenLightDatabase.sqlite"];
     
     [GreenlightHelper initDefaults];
     
-    User *user = [User MR_findFirstByAttribute:@"current" withValue:[NSNumber numberWithBool:true]];
-    
-    if (user){
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
         [self showMainStory];
-        
     } else {
         UIStoryboard* sidebarStoryboard = [UIStoryboard storyboardWithName:@"LoginStoryboard" bundle:nil];
         
-        SidebarController *signupController = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"SignupController"];
+        SidebarController *signupController = [sidebarStoryboard instantiateViewControllerWithIdentifier:@"loginController"];
         
         self.window.rootViewController = signupController;
-        
     }
     
-    [Parse setApplicationId:@"dlS34ZRE6TxpC9lNqiVJ0GnouYZBFuidXX93bkt9"
-                  clientKey:@"Pf240BGzxqk9BSBdgEjZAdD9qgdVAZ9xtAna27uI"];
-
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [Crashlytics startWithAPIKey:@"d5979dbb4d0dac0abc0004b2ee248b7e78c15f83"];
     [TestFlight takeOff:@"8d8edd4e-f731-4773-b33a-65690977c36e"];
