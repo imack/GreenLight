@@ -24,5 +24,7 @@
 #import "AuthClient.h"
 #import <CoreLocation/CoreLocation.h>
 #import <PixateFreestyle.h>
+#import <Parse/Parse.h>
+
 
 

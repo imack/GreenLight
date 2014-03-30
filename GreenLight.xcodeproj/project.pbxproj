@@ -49,6 +49,7 @@
 		2815D0CA177377FB001FF5F9 /* FlatTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2815D0C8177377FB001FF5F9 /* FlatTheme.m */; };
 		282F71DF18E776B500E10D26 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282F71DE18E776B500E10D26 /* Crashlytics.framework */; };
 		282F71E118E7B51500E10D26 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 282F71E018E7B51500E10D26 /* default.css */; };
+		282F71E718E7BD3300E10D26 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282F71E618E7BD3300E10D26 /* SignupViewController.m */; };
 		283A57CF18E607A700F5C169 /* CredentialStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 283A57CD18E607A700F5C169 /* CredentialStore.m */; };
 		283A57D618E6082B00F5C169 /* AuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 283A57D418E6082B00F5C169 /* AuthClient.m */; };
 		28C033EE1767E35A00C25E12 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C033ED1767E35A00C25E12 /* UIKit.framework */; };
@@ -77,10 +78,6 @@
 		28CF00B41782167D00144660 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B31782167B00144660 /* AboutViewController.m */; };
 		28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B61783397E00144660 /* ApplicationViewController.m */; };
 		28CF00BA1783C64500144660 /* EditableTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00B91783C64500144660 /* EditableTableCell.m */; };
-		28CF00BD178485BD00144660 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */; };
-		28CF00C5178498BF00144660 /* JLActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00C0178498BF00144660 /* JLActionButton.m */; };
-		28CF00C6178498BF00144660 /* JLActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00C2178498BF00144660 /* JLActionSheet.m */; };
-		28CF00C7178498BF00144660 /* JLActionSheetStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00C4178498BF00144660 /* JLActionSheetStyle.m */; };
 		28CF00C917849A3600144660 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF00C817849A3600144660 /* QuartzCore.framework */; };
 		28CF00CB1784A24F00144660 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CF00CA1784A24F00144660 /* LoginStoryboard.storyboard */; };
 		28CF00D11784A29400144660 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00CE1784A29400144660 /* LoginController.m */; };
@@ -147,6 +144,8 @@
 		2815D0C8177377FB001FF5F9 /* FlatTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlatTheme.m; sourceTree = "<group>"; };
 		282F71DE18E776B500E10D26 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		282F71E018E7B51500E10D26 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; };
+		282F71E518E7BD3300E10D26 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		282F71E618E7BD3300E10D26 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		283A57CC18E5232A00F5C169 /* SharedConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedConstants.h; sourceTree = "<group>"; };
 		283A57CD18E607A700F5C169 /* CredentialStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialStore.m; sourceTree = "<group>"; };
 		283A57CE18E607A700F5C169 /* CredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialStore.h; sourceTree = "<group>"; };
@@ -193,14 +192,6 @@
 		28CF00B61783397E00144660 /* ApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
 		28CF00B81783C64500144660 /* EditableTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableCell.h; sourceTree = "<group>"; };
 		28CF00B91783C64500144660 /* EditableTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableCell.m; sourceTree = "<group>"; };
-		28CF00BB178485BD00144660 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
-		28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
-		28CF00BF178498BF00144660 /* JLActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLActionButton.h; sourceTree = "<group>"; };
-		28CF00C0178498BF00144660 /* JLActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLActionButton.m; sourceTree = "<group>"; };
-		28CF00C1178498BF00144660 /* JLActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLActionSheet.h; sourceTree = "<group>"; };
-		28CF00C2178498BF00144660 /* JLActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLActionSheet.m; sourceTree = "<group>"; };
-		28CF00C3178498BF00144660 /* JLActionSheetStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLActionSheetStyle.h; sourceTree = "<group>"; };
-		28CF00C4178498BF00144660 /* JLActionSheetStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLActionSheetStyle.m; sourceTree = "<group>"; };
 		28CF00C817849A3600144660 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		28CF00CA1784A24F00144660 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		28CF00CD1784A29400144660 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
@@ -299,9 +290,6 @@
 		2815D0CB1777E06D001FF5F9 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				28CF00BE178498BF00144660 /* JLActionSheet */,
-				28CF00BB178485BD00144660 /* TPKeyboardAvoidingTableView.h */,
-				28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */,
 				283A57CD18E607A700F5C169 /* CredentialStore.m */,
 				283A57CE18E607A700F5C169 /* CredentialStore.h */,
 				28CF00A41782080700144660 /* RCSwitch */,
@@ -357,7 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				283A57D018E607ED00F5C169 /* Models */,
-				28CF00CC1784A27700144660 /* Signup */,
+				28CF00CC1784A27700144660 /* Authentication */,
 				28CF00AB1782159800144660 /* Activities */,
 				28CF009D1782078200144660 /* Settings */,
 				2815D0CB1777E06D001FF5F9 /* lib */,
@@ -456,26 +444,15 @@
 			name = Activities;
 			sourceTree = "<group>";
 		};
-		28CF00BE178498BF00144660 /* JLActionSheet */ = {
-			isa = PBXGroup;
-			children = (
-				28CF00BF178498BF00144660 /* JLActionButton.h */,
-				28CF00C0178498BF00144660 /* JLActionButton.m */,
-				28CF00C1178498BF00144660 /* JLActionSheet.h */,
-				28CF00C2178498BF00144660 /* JLActionSheet.m */,
-				28CF00C3178498BF00144660 /* JLActionSheetStyle.h */,
-				28CF00C4178498BF00144660 /* JLActionSheetStyle.m */,
-			);
-			path = JLActionSheet;
-			sourceTree = "<group>";
-		};
-		28CF00CC1784A27700144660 /* Signup */ = {
+		28CF00CC1784A27700144660 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				28CF00CD1784A29400144660 /* LoginController.h */,
 				28CF00CE1784A29400144660 /* LoginController.m */,
+				282F71E518E7BD3300E10D26 /* SignupViewController.h */,
+				282F71E618E7BD3300E10D26 /* SignupViewController.m */,
 			);
-			name = Signup;
+			name = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -683,15 +660,12 @@
 				28CF00AA1782081400144660 /* RCSwitchOnOff.m in Sources */,
 				28CF00B0178215A500144660 /* FeedCell.m in Sources */,
 				283A57CF18E607A700F5C169 /* CredentialStore.m in Sources */,
+				282F71E718E7BD3300E10D26 /* SignupViewController.m in Sources */,
 				28CF00B1178215A500144660 /* FeedController.m in Sources */,
 				28CF00B41782167D00144660 /* AboutViewController.m in Sources */,
 				28CF00B71783397F00144660 /* ApplicationViewController.m in Sources */,
 				283A57D618E6082B00F5C169 /* AuthClient.m in Sources */,
 				28CF00BA1783C64500144660 /* EditableTableCell.m in Sources */,
-				28CF00BD178485BD00144660 /* TPKeyboardAvoidingTableView.m in Sources */,
-				28CF00C5178498BF00144660 /* JLActionButton.m in Sources */,
-				28CF00C6178498BF00144660 /* JLActionSheet.m in Sources */,
-				28CF00C7178498BF00144660 /* JLActionSheetStyle.m in Sources */,
 				28CF00D11784A29400144660 /* LoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

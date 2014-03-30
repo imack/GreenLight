@@ -12,7 +12,6 @@
 #import "FlatTheme.h"
 #import "GHSidebarSearchViewControllerDelegate.h"
 #import "User.h"
-#import <Parse/Parse.h>
 #import <Crashlytics/Crashlytics.h>
 #import <TestFlight.h>
 

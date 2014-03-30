@@ -9,7 +9,6 @@
 #import "GreenlightHelper.h"
 #import "AppDelegate.h"
 #import "User.h"
-#import "JLActionSheet.h"
 
 @implementation GreenlightHelper
 

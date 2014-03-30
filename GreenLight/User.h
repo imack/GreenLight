@@ -21,7 +21,7 @@
 @property (nonatomic, retain) NSDate * dob;
 
 @property (nonatomic, retain) NSNumber * orientation;
-@property (nonatomic, retain) NSNumber * gender;
+@property (nonatomic, retain) NSNumber * sex;
 @property (nonatomic, retain) NSNumber * prompt;
 @property (nonatomic, retain) NSNumber * min_age;
 @property (nonatomic, retain) NSNumber * max_age;

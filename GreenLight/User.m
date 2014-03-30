@@ -21,7 +21,7 @@
 @dynamic name;
 @dynamic user_bio;
 @dynamic orientation;
-@dynamic gender;
+@dynamic sex;
 @dynamic min_age;
 @dynamic max_age;
 @dynamic status;

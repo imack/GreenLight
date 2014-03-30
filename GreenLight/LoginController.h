@@ -29,5 +29,7 @@
 
 @property (nonatomic, weak) IBOutlet UIView * overlayView;
 
+-(IBAction)signupView:(id)sender;
+
 
 @end

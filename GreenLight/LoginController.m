@@ -8,7 +8,7 @@
 
 #import "LoginController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "JLActionSheet.h"
+#import "SignupViewController.h"
 #import "AppDelegate.h"
 #import "FlatTheme.h"
 
@@ -83,39 +83,13 @@
     
 }
 
--(void) signupAction{
-    user.name = self.usernameField.text;
-    //user.user_bio = self.descriptionField.text;
+-(IBAction)signupView:(id)sender{
     
-    [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfAndWait];
+    SignupViewController *signupViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signupController"];
     
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    [appDelegate showMainStory];
-}
+    [self presentViewController:signupViewController animated:true completion:nil];
 
--(void) viewDidAppear:(BOOL)animated{
-    
-    /*
-    JLActionSheet *sheet =  [JLActionSheet sheetWithTitle:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@[@"I'm Female", @"I'm Male"]];
-    [sheet allowTapToDismiss:FALSE];
-    
-    [sheet setClickedButtonBlock:^(JLActionSheet *actionSheet, NSInteger buttonIndex) {
-        user.gender = [NSNumber numberWithInteger:buttonIndex];
-        
-        JLActionSheet *newSheet =  [JLActionSheet sheetWithTitle:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@[@"I'm into Women", @"I'm into Men", @"I'm into both"]];
-        
-        [newSheet setClickedButtonBlock:^(JLActionSheet *actionSheet, NSInteger buttonIndex) {
-            user.orientation = [NSNumber numberWithInteger:buttonIndex];
-            
-            
-        }];
-        [newSheet showOnViewController:self];
-        
-    }];
-    
-    [sheet showOnViewController:self];
-     */
+
 }
 
 - (void)didReceiveMemoryWarning

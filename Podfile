@@ -11,5 +11,6 @@ pod 'TestFlightSDK',  '~> 3.0.0'
 pod 'PixateFreestyle'
 pod 'TPKeyboardAvoiding', '~> 1.2.3'
 pod 'RETableViewManager', '~> 1.5.10'
+pod 'JLActionSheet'
 
 
