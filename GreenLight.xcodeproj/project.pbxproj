@@ -84,7 +84,6 @@
 		28CF00C917849A3600144660 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF00C817849A3600144660 /* QuartzCore.framework */; };
 		28CF00CB1784A24F00144660 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CF00CA1784A24F00144660 /* LoginStoryboard.storyboard */; };
 		28CF00D11784A29400144660 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00CE1784A29400144660 /* LoginController.m */; };
-		28CF00D51784A72F00144660 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF00D41784A72F00144660 /* TPKeyboardAvoidingScrollView.m */; };
 		40E72BB69B524FBC907FCB35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1368908B6B2B444681FFC0AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -206,8 +205,6 @@
 		28CF00CA1784A24F00144660 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		28CF00CD1784A29400144660 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		28CF00CE1784A29400144660 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
-		28CF00D31784A72F00144660 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
-		28CF00D41784A72F00144660 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		E31145631EAA4AC3A0DF16CE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -307,8 +304,6 @@
 				28CF00BC178485BD00144660 /* TPKeyboardAvoidingTableView.m */,
 				283A57CD18E607A700F5C169 /* CredentialStore.m */,
 				283A57CE18E607A700F5C169 /* CredentialStore.h */,
-				28CF00D31784A72F00144660 /* TPKeyboardAvoidingScrollView.h */,
-				28CF00D41784A72F00144660 /* TPKeyboardAvoidingScrollView.m */,
 				28CF00A41782080700144660 /* RCSwitch */,
 			);
 			name = lib;
@@ -698,7 +693,6 @@
 				28CF00C6178498BF00144660 /* JLActionSheet.m in Sources */,
 				28CF00C7178498BF00144660 /* JLActionSheetStyle.m in Sources */,
 				28CF00D11784A29400144660 /* LoginController.m in Sources */,
-				28CF00D51784A72F00144660 /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
