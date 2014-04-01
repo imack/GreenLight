@@ -33,16 +33,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    UIColor* mainColor = [UIColor colorWithRed:249.0/255 green:223.0/255 blue:244.0/255 alpha:1.0f];
+
     UIColor* darkColor = [UIColor colorWithRed:62.0/255 green:28.0/255 blue:55.0/255 alpha:1.0f];
     
     NSString* fontName = @"Avenir-Book";
     NSString* boldFontName = @"Avenir-Black";
-    
-    self.view.backgroundColor = mainColor;
-    
+
     self.usernameField.placeholder = @"Email Address";
+    self.usernameField.delegate = self;
     
     UIView* leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 41, 20)];
     self.usernameField.leftViewMode = UITextFieldViewModeAlways;
@@ -53,6 +51,7 @@
     UIView* leftView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 41, 20)];
     self.passwordField.leftViewMode = UITextFieldViewModeAlways;
     self.passwordField.leftView = leftView2;
+    self.passwordField.delegate = self;
     
     self.loginButton.backgroundColor = darkColor;
     self.loginButton.titleLabel.font = [UIFont fontWithName:boldFontName size:20.0f];
@@ -70,11 +69,7 @@
     self.titleLabel.font =  [UIFont fontWithName:boldFontName size:24.0f];
     self.titleLabel.text = @"GOOD TO SEE YOU";
     
-    self.infoLabel.textColor =  [UIColor darkGrayColor];
-    self.infoLabel.font =  [UIFont fontWithName:boldFontName size:14.0f];
     self.infoLabel.text = @"Welcome back, please login below";
-    
-    self.infoView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
     
     self.headerImageView.image = [UIImage imageNamed:@"running.jpg"];
     self.headerImageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -83,13 +78,36 @@
     
 }
 
+
+
 -(IBAction)signupView:(id)sender{
     
-    SignupViewController *signupViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signupController"];
+    SignupViewController *signupViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signupNav"];
     
     [self presentViewController:signupViewController animated:true completion:nil];
 
 
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField*)textField{
+    
+    if ([self.usernameField.text isEqualToString:@""] || [self.passwordField.text isEqualToString:@""]){
+        if (self.usernameField == textField){
+            [self.passwordField becomeFirstResponder];
+        } else {
+            [self.usernameField becomeFirstResponder];
+        }
+        
+    } else {
+        [PFUser logInWithUsernameInBackground:self.usernameField.text password:self.passwordField.text
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                // Do stuff after successful login.
+                                            } else {
+                                                // The login failed. Check error to see why.
+                                            }
+                                        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning

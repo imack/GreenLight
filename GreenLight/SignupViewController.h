@@ -14,4 +14,7 @@
 @property (strong, readwrite, nonatomic) RETableViewManager *manager;
 @property (strong, readwrite, nonatomic) RETableViewSection *main;
 
+@property (nonatomic, weak) IBOutlet UIView * infoView;
+@property (nonatomic, weak) IBOutlet UILabel * infoLabel;
+
 @end

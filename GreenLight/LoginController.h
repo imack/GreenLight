@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface LoginController : UIViewController
+@interface LoginController : UIViewController<UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField * usernameField;
 

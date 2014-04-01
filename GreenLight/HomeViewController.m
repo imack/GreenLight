@@ -38,7 +38,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID] identifier:@"com.lokaloapp.LokaloApp"];
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID] identifier:@"ca.lunarluau.GreenLight"];
     region = [_locationManager.monitoredRegions member:region];
     if(region)
     {
@@ -66,7 +66,7 @@
     
     if( self.enabledSwitch.on )
     {
-        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:_uuid identifier:@"com.lokaloapp.LokaloApp"];
+        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:_uuid identifier:@"ca.lunarluau.GreenLight"];
         
         if(region)
         {
@@ -79,7 +79,7 @@
     }
     else
     {
-        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID] identifier:@"com.lokaloapp.LokaloApp"];
+        CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID] identifier:@"ca.lunarluau.GreenLight"];
         [_locationManager stopMonitoringForRegion:region];
     }
 }

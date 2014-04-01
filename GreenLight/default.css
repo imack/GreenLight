@@ -5,6 +5,23 @@
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.7);
     font-family: "Avenir-Book";
-    font-weight: semibold;
     font-size: 16;
 }
+
+
+.infoView {
+    border-color: rgb(244, 244, 244);
+}
+
+.infoLabel {
+    color: rgb(169,169,169);
+    font-family: "Avenir-Book";
+    font-size: 14;
+
+}
+
+.mainBackground {
+    background-color: rgb(249, 223, 244)
+}
+
+
